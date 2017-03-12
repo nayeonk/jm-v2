@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JM - Menu test</title>
+	<style>
+		.menu {
+			border: 1px solid pink;
+			width: 500px;
+			height: 500px;
+			position: relative;
+			margin-right: auto;
+			margin-left: auto;
+			top: 300px;
+		}
+		.menu li {
+			width: 10em;
+			height: 10em;
+			display: block;
+			background-color: #ededed;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -1.3em;
+			margin-left: -10em;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			transform-origin: bottom right;
+		}
+		.menu li:nth-child(1) {
+			transform: rotate(15deg) skew(65deg);
+		}
+		.menu li:nth-child(2) {
+			transform: rotate(40deg) skew(65deg);
+		}
+		.menu li:nth-child(3) {
+			transform: rotate(65deg) skew(65deg);
+		}
+		.menu li:nth-child(4) {
+			transform: rotate(90deg) skew(65deg);
+		}
+		.menu li:nth-child(5) {
+			transform: rotate(115deg) skew(65deg);
+		}
+		.menu li:nth-child(6) {
+			transform: rotate(140deg) skew(65deg);
+		}
+		.menu li:nth-child(7) {
+			transform: rotate(165deg) skew(65deg);
+		}
+		.menu li a {
+			position: absolute;
+			display: block;
+			background-color: pink;
+			width: 14.5em;
+			height: 14.5em;
+			bottom: -7.25em;
+			right: -7.25em;
+			transform: skew(-65deg) rotate(-77.5deg);
+			text-align: center;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="menu">
+		<ul>
+			<li><a>Home</a></li>
+			<li><a>Interests</a></li>
+			<li><a>Projects</a></li>
+			<li><a>Photos</a></li>
+			<li><a>Videos</a></li>
+			<li><a>Podcast</a></li>
+			<li><a>Ezine</a></li>
+		</ul>
+	</div>
+</body>
+</html>

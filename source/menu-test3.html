@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+	<title>Moo</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<style>
+	* {
+		position: relative;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	html,
+	body {
+		height: 100%;
+	}
+
+	body {
+		background: #52be7f;
+		color: #fff;
+	}
+
+.component {
+	position: relative;
+	margin-bottom: 3em;
+	height: 15em;
+	background: rgba(0,0,0,0.05);
+	font-family: 'Lato', Arial, sans-serif;
+}
+
+.component > h2 {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 12em;
+	opacity: 0.1;
+	cursor: default;
+}
+
+.cn-button {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 11;
+	margin-top: -2.25em;
+	margin-left: -2.25em;
+	padding-top: 0em;
+	width: 4.5em;
+	height: 4.5em;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	background-color: #fff;
+	color: #52be7f;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	cursor: pointer;
+	-webkit-backface-visibility: hidden;
+}
+
+.csstransforms .cn-wrapper {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	z-index: 10;
+	margin-top: -13em;
+	margin-left: -13.5em;
+	width: 27em;
+	height: 27em;
+	border-radius: 50%;
+	background: transparent;
+	opacity: 0;
+	-webkit-transition: all .3s ease 0.3s;
+	-moz-transition: all .3s ease 0.3s;
+	transition: all .3s ease 0.3s;
+	-webkit-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	-moz-transform: scale(0.1);
+	transform: scale(0.1);
+	pointer-events: none;
+	overflow: hidden;
+}
+
+/*cover to prevent extra space of anchors from being clickable*/
+.csstransforms .cn-wrapper:after{
+  content:".";
+  display:block;
+  font-size:2em;
+  width:6.2em;
+  height:6.2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.1em;
+  top:50%;
+  margin-top: -3.1em;
+  border-radius: 50%;
+  z-index:10;
+  color: transparent;
+}
+
+.csstransforms .opened-nav {
+	border-radius: 50%;
+	opacity: 1;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	pointer-events: auto;
+}
+
+.csstransforms .cn-wrapper li {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	margin-top: -1.3em;
+	margin-left: -10em;
+	width: 10em;
+	height: 10em;
+	font-size: 1.5em;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	transition: all .3s ease;
+	-webkit-transform: rotate(76deg) skew(60deg);
+	-moz-transform: rotate(76deg) skew(60deg);
+	-ms-transform: rotate(76deg) skew(60deg);
+	transform: rotate(76deg) skew(60deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	pointer-events: none;
+}
+
+.csstransforms .cn-wrapper li a {
+	position: absolute;
+	right: -7.25em;
+	bottom: -7.25em;
+	display: block;
+	width: 14.5em;
+	height: 14.5em;
+	border-radius: 50%;
+	background: #429a67;
+	background: -webkit-radial-gradient(transparent 35%, #429a67 35%);
+	background: -moz-radial-gradient(transparent 35%, #429a67 35%);
+	background: radial-gradient(transparent 35%, #429a67 35%);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2em;
+	line-height: 2;
+	-webkit-transform: skew(-60deg) rotate(-75deg) scale(1);
+	-moz-transform: skew(-60deg) rotate(-75deg) scale(1);
+	-ms-transform: skew(-60deg) rotate(-75deg) scale(1);
+	transform: skew(-60deg) rotate(-75deg) scale(1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	pointer-events: auto;
+}
+
+.csstransforms .cn-wrapper li a span {
+	position: relative;
+	top: 1.8em;
+	display: block;
+	font-size: .5em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.csstransforms .cn-wrapper li a:hover,
+.csstransforms .cn-wrapper li a:active,
+.csstransforms .cn-wrapper li a:focus {
+	background: -webkit-radial-gradient(transparent 35%, #449e6a 35%);
+	background: -moz-radial-gradient(transparent 35%, #449e6a 35%);
+	background: radial-gradient(transparent 35%, #449e6a 35%);
+}
+.csstransforms .cn-wrapper li a:focus {
+    position: fixed; /* fix the displacement bug in webkit browsers when using tab key */
+}
+
+.csstransforms .opened-nav li {
+	-webkit-transition: all .3s ease .3s;
+	-moz-transition: all .3s ease .3s;
+	transition: all .3s ease .3s;
+}
+
+.csstransforms .opened-nav li:first-child {
+	-webkit-transform: rotate(-20deg) skew(60deg);
+	-moz-transform: rotate(-20deg) skew(60deg);
+	-ms-transform: rotate(-20deg) skew(60deg);
+	transform: rotate(-20deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(2) {
+	-webkit-transform: rotate(12deg) skew(60deg);
+	-moz-transform: rotate(12deg) skew(60deg);
+	-ms-transform: rotate(12deg) skew(60deg);
+	transform: rotate(12deg) skew(60deg);
+}
+
+.csstransforms .opened-nav  li:nth-child(3) {
+	-webkit-transform: rotate(44deg) skew(60deg);
+	-moz-transform: rotate(44deg) skew(60deg);
+	-ms-transform: rotate(44deg) skew(60deg);
+	transform: rotate(44deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(4) {
+	-webkit-transform: rotate(76deg) skew(60deg);
+	-moz-transform: rotate(76deg) skew(60deg);
+	-ms-transform: rotate(76deg) skew(60deg);
+	transform: rotate(76deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(5) {
+	-webkit-transform: rotate(108deg) skew(60deg);
+	-moz-transform: rotate(108deg) skew(60deg);
+	-ms-transform: rotate(108deg) skew(60deg);
+	transform: rotate(108deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(6) {
+	-webkit-transform: rotate(140deg) skew(60deg);
+	-moz-transform: rotate(140deg) skew(60deg);
+	-ms-transform: rotate(140deg) skew(60deg);
+	transform: rotate(140deg) skew(60deg);
+}
+
+.csstransforms .opened-nav li:nth-child(7) {
+	-webkit-transform: rotate(172deg) skew(60deg);
+	-moz-transform: rotate(172deg) skew(60deg);
+	-ms-transform: rotate(172deg) skew(60deg);
+	transform: rotate(172deg) skew(60deg);
+}
+
+.no-csstransforms .cn-wrapper {
+	overflow: hidden;
+	margin: 10em auto;
+	padding: .5em;
+	text-align: center;
+}
+
+.no-csstransforms .cn-wrapper ul {
+	display: inline-block;
+}
+
+.no-csstransforms .cn-wrapper li {
+	float: left;
+	width: 5em;
+	height: 5em;
+	background-color: #fff;
+	text-align: center;
+	font-size: 1em;
+	line-height: 5em;
+}
+
+.no-csstransforms .cn-wrapper li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+}
+
+.no-csstransforms .cn-wrapper li a:hover,
+.no-csstransforms .cn-wrapper li a:active,
+.no-csstransforms .cn-wrapper li a:focus {
+	background-color: #f8f8f8;
+}
+
+.no-csstransforms .cn-wrapper li.active a{
+	background-color: #6F325C;
+	color: #fff;
+}
+
+.no-csstransforms .cn-button {
+	display: none;
+}
+
+@media only screen and (max-width: 620px) {
+	.no-csstransforms li {
+		width: 4em;
+		height: 4em;
+		line-height: 4em;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.no-ccstransforms .cn-wrapper {
+		padding: .5em;
+	}
+
+	.no-csstransforms .cn-wrapper li {
+		width: 4em;
+		height: 4em;
+		font-size: .9em;
+		line-height: 4em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.csstransforms .cn-wrapper {
+		font-size: .68em;
+	}
+
+	.cn-button {
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width:420px) {
+	.no-csstransforms .cn-wrapper li {
+		width: 100%;
+		height: 3em;
+		line-height: 3em;
+	}
+}
+	</style>
+	<script src="js/modernizr-custom.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="component">
+		<h2>Celery swiss chard melon</h2>
+		<button class="cn-button" id="cn-button">+</button>
+		<div class="cn-wrapper" id="cn-wrapper">
+		   <ul>
+		       <li><a href="#"><span>About</span></a></li>
+		       <li><a href="#"><span>Tutorials</span></a></li>
+		       <li><a href="#"><span>Articles</span></a></li>
+		       <li><a href="#"><span>Snippets</span></a></li>
+		       <li><a href="#"><span>Plugins</span></a></li>
+		       <li><a href="#"><span>Contact</span></a></li>
+		       <li><a href="#"><span>Follow</span></a></li>
+		   </ul>
+		</div>
+	</div>
+	<section>
+				<p>Soko leek tomatillo quandong winter purslane caulie jícama daikon dandelion bush tomato. Daikon cress amaranth leek cabbage black-eyed pea kakadu plum scallion watercress garbanzo gram caulie welsh onion water spinach tomatillo groundnut desert raisin. Wakame salsify bunya nuts spring onion lotus root prairie turnip fennel onion dandelion black-eyed pea bok choy zucchini taro. Jícama collard greens amaranth bell pepper catsear brussels sprout sweet pepper daikon spring onion aubergine broccoli rabe quandong mustard celery corn groundnut peanut. Mung bean fennel eggplant water spinach bunya nuts sierra leone bologi epazote okra caulie groundnut black-eyed pea parsnip fava bean squash.</p>
+				<p>Parsnip tomatillo swiss chard garbanzo gourd potato silver beet. Celery swiss chard melon zucchini arugula pea quandong beet greens radish artichoke black-eyed pea endive winter purslane horseradish garlic amaranth collard greens chickpea. Rock melon pumpkin collard greens celery broccoli rabe endive nori brussels sprout gourd courgette sea lettuce artichoke desert raisin coriander chard.</p>
+				<p>Collard greens ricebean horseradish wattle seed chard epazote potato peanut gram earthnut pea spinach yarrow desert raisin salad mung bean summer purslane fennel. Water spinach celery cucumber grape cauliflower nori daikon sweet pepper endive lentil turnip greens catsear leek beet greens. Melon seakale parsnip soybean bamboo shoot fennel scallion. Coriander groundnut squash corn aubergine bitterleaf azuki bean dandelion courgette broccoli rabe. Chickweed salsify chickweed groundnut nori okra lentil water spinach rock melon broccoli. Soko leek tomatillo quandong winter purslane caulie jícama daikon dandelion bush tomato. Daikon cress amaranth leek cabbage black-eyed pea kakadu plum scallion watercress garbanzo gram caulie welsh onion water spinach tomatillo groundnut desert raisin. Wakame salsify bunya nuts spring onion lotus root prairie turnip fennel onion dandelion black-eyed pea bok choy zucchini taro. Jícama collard greens amaranth bell pepper catsear brussels sprout sweet pepper daikon spring onion aubergine broccoli rabe quandong mustard celery corn groundnut peanut. Mung bean fennel eggplant water spinach bunya nuts sierra leone bologi epazote okra caulie groundnut black-eyed pea parsnip fava bean squash.</p>
+				<p>Parsnip tomatillo swiss chard garbanzo gourd potato silver beet. Celery swiss chard melon zucchini arugula pea quandong beet greens radish artichoke black-eyed pea endive winter purslane horseradish garlic amaranth collard greens chickpea. Rock melon pumpkin collard greens celery broccoli rabe endive nori brussels sprout gourd courgette sea lettuce artichoke desert raisin coriander chard.</p>
+				<p>Collard greens ricebean horseradish wattle seed chard epazote potato peanut gram earthnut pea spinach yarrow desert raisin salad mung bean summer purslane fennel. Water spinach celery cucumber grape cauliflower nori daikon sweet pepper endive lentil turnip greens catsear leek beet greens. Melon seakale parsnip soybean bamboo shoot fennel scallion. Coriander groundnut squash corn aubergine bitterleaf azuki bean dandelion courgette broccoli rabe. Chickweed salsify chickweed groundnut nori okra lentil water spinach rock melon broccoli.</p>
+			</section>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/menu2.js"></script>
+</body>
+</html>
