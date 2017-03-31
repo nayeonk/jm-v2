@@ -168,13 +168,116 @@
 			opacity: 0;
 			transform: translate3d(0, 20px, 0);
 		}
+		.cn-nav {
+			position: absolute;
+			width: 75%;
+			margin-right: auto;
+			margin-left: auto;
+			left:0;
+			right:0;
+			top: 60%;
+		}
+		.cn-nav > a{
+		    position: absolute;
+		    top: 0px;
+		    height: 70px;
+		    width: 70px;
+		}
+		a.cn-nav-prev{
+		    left: 0px;
+		}
+		a.cn-nav-next{
+		    right: 0px;
+		}
+		.cn-nav a span{
+		    width: 46px;
+		    height: 46px;
+		    display: block;
+		    text-indent: -9000px;
+		    -moz-border-radius: 23px;
+		    -webkit-border-radius: 23px;
+		    border-radius: 23px;
+		    cursor: pointer;
+		    opacity: 0.9;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    background-size: 17px 25px;
+		    margin: -23px 0 0 -23px;
+		    -webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			-o-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+		}
+		.cn-nav a.cn-nav-prev span{
+		    background: #666 url(/assets/images/prev.png) no-repeat center center;
+		}
+		.cn-nav a.cn-nav-next span{
+		    background: #666 url(/assets/images/next.png) no-repeat center center;
+		}
+		.cn-nav a div{
+		    width: 0px;
+		    height: 0px;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    overflow: hidden;
+		    background-size: 100% 100%;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    margin: 0px;
+		    -moz-border-radius: 0px;
+		    -webkit-border-radius: 0px;
+		    border-radius: 0px; 
+		    -webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out;
+			transition: all 0.2s ease-out;
+		}
+		.cn-nav a:hover span{
+		    width: 100px;
+		    height: 100px;
+		    -moz-border-radius: 50px;
+		    -webkit-border-radius: 50px;
+		    border-radius: 50px;
+		    opacity: 0.6;
+		    margin: -50px 0 0 -50px;
+		    background-size: 22px 32px;
+		    background-color:#a8872d;
+		}
+		.cn-nav a:hover div{
+		    width: 90px;
+		    height: 90px;
+		    background-size: 120% 120%;
+		    margin: -45px 0 0 -45px;
+		    -moz-border-radius: 45px;
+		    -webkit-border-radius: 45px;
+		    border-radius: 45px; 
+		}
 	</style>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container" id="container">
 		<header class="intro">
 
 			<img class="intro__image" src="/assets/images/header-glacier.jpg" alt="Iceland glacier"/>
+
+			<div class="cn-nav">
+				<a href="#" class="cn-nav-prev">
+					<span>Previous</span>
+					<div style="background-image:url(/assets/images/item04-thumb.jpg);"></div> 
+				</a>
+				<a href="#" class="cn-nav-next">
+					<span>Next</span>
+					<div style="background-image:url(../assets/images/item01-thumb.jpg);"></div>
+				</a>
+			</div>
 
 			<div class="intro__content">
 
@@ -278,6 +381,49 @@
 			trigger.addEventListener( 'click', toggleContent );
 
 		})();
+
+		$(document).ready( function() {
+			var index = 0;
+
+			// Next stuff
+			var images = [
+				'header-glacier.jpg',
+				'item01.jpg',
+				'item02.jpg',
+				'item03.jpg',
+				'item04.jpg'
+			]
+			
+			$('.cn-nav-prev').click(function(event) {
+				event.preventDefault();
+
+				if (index == 0) {
+					index = 5; // need to make dynamic later
+				}
+				index--;
+				$('.intro__image').attr('src', '/assets/images/' + images[index]);
+
+				if (index == 0) {
+					index = 5;
+				}
+				$('.cn-nav-prev div').css('background-image', 'url(/assets/images/' + images[index-1] + ')')
+			});
+
+			$('.cn-nav-next').click(function(event) {
+				event.preventDefault();
+
+				if (index == 5) {
+					index = 0; // need to make dynamic later
+				}
+				index++;
+				$('.intro__image').attr('src', '/assets/images/' + images[index]);
+
+				if (index == 4) {
+					index = -1;
+				}
+				$('.cn-nav-next div').css('background-image', 'url(/assets/images/' + images[index+1] + ')')
+			});
+		});
 	</script>
 </body>
 </html>
