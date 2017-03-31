@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<style>
+		html,body {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background: #2a2e39;
+			color: #dbdbdb;
+		}
+		.intro {
+			position: fixed;
+			z-index: 10;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			background: #2a2e39;
+			transition: transform 0.6s;
+			transition-timing-funtion: cubic-bezier(0.7, 0, 0.3, 1);
+		}
+		.container--open .intro {
+			transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
+		}
+		.intro__image {
+			position: absolute;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 120%;
+			width: auto;
+			height: auto;
+			opacity: 0.8;
+			transition: transform 0.6s, opacity 0.6s;
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		}
+
+		.container--open .intro__image {
+			opacity: 0;
+			transform: translate3d(0, 20%, 0);
+		}
+		.intro__content {
+			position: absolute;
+			bottom: 0;
+			padding: 1.8em;
+			width: 100%;
+			font-size: 1.15em;
+		}
+		.intro__title {
+			margin: 0 0 20px;
+			font-weight: 900;
+			font-size: 4em;
+			font-family: "Playfair Display", Georgia, serif;
+			line-height: 1;
+		}
+		.intro__subtitle {
+			display: flex;
+			align-items: center;
+		}
+		.intro__description {
+			/*margin: 0 auto 0 1em;*/
+			margin: 0 54% 0 1em;
+			line-height: 1.2;
+		}
+		.trigger {
+			position: relative;
+			overflow: hidden;
+			margin: 0 0 0 20px;
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			outline: none;
+			border: none;
+			background: none;
+			flex: none;
+			-webkit-flex: none;
+		}
+		.trigger span {
+			position: absolute;
+			top: 100%;
+		}
+		.icon rect, .icon line {
+			stroke: #dbdbdb;
+			fill: none;
+			stroke-width: 2px;
+		}
+		.icon {
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+		}
+		.icon--cross,
+		.trigger--active .icon--grid {
+			opacity: 0;
+			transform: scale3d(0.5, 0.5, 1);
+		}
+
+		.trigger--active .icon--cross {
+			opacity: 1;
+			transform: scale3d(1, 1, 1);
+		}
+		.items-wrap {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			padding: 250px 5px 0;
+		}
+		.items-wrap::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #2a2e39;
+			content: '';
+			opacity: 1;
+			transition: opacity 0.6s;
+			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+			pointer-events: none;
+		}
+
+		.container--open .items-wrap::after {
+			opacity: 0;
+		}
+
+		.item {
+			position: relative;
+			overflow: hidden;
+			height: 22vw;
+			flex: 1 0 25%;
+			outline: none;
+			border: 5px solid #2a2e39;
+			border-width: 0 5px 10px;
+			background: #2a2e39;
+		}
+
+		.item__image {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			min-height: 100%;
+			width: 100%;
+			opacity: 0.7;
+			transition: transform 0.5s, opacity 0.5s;
+			transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
+		}
+
+		.item:hover .item__image {
+			opacity: 1;
+			transform: translate3d(0, -50%, 0);
+		}
+		.item__title {
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+			padding: 1em;
+			color: #dbdbdb;
+			font-size: 1.85em;
+			font-family: "Playfair Display", Georgia, serif;
+			line-height: 1;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+
+		.item:hover .item__title {
+			opacity: 0;
+			transform: translate3d(0, 20px, 0);
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="container">
+		<header class="intro">
+
+			<img class="intro__image" src="/assets/images/header-glacier.jpg" alt="Iceland glacier"/>
+
+			<div class="intro__content">
+
+				<h1 class="intro__title">Photo Gallery</h1>
+
+				<div class="intro__subtitle">
+
+					<div class="codrops-links">
+						<!-- links -->
+					</div>
+
+					<div class="intro__description"> A short description could go here, if needed. Hello! </div>
+
+					<button class="trigger">
+
+						<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+							<g class="icon icon--grid">
+								<rect x="32.5" y="5.5" width="22" height="22"/>
+								<rect x="4.5" y="5.5" width="22" height="22"/>
+								<rect x="32.5" y="33.5" width="22" height="22"/>
+								<rect x="4.5" y="33.5" width="22" height="22"/>
+							</g>
+							<g class="icon icon--cross">
+								<line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
+								<line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
+							</g>
+						</svg>
+
+						<span>View content</span>
+
+					</button>
+
+				</div><!-- /intro__subtitle -->
+
+			</div><!-- /intro__content -->
+
+		</header><!-- /intro -->
+
+		<section class="items-wrap">
+
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item01.jpg" alt="item01"/>
+				<h2 class="item__title">Magnificence</h2>
+			</a>
+
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item02.jpg" alt="item02"/>
+				<h2 class="item__title">Electrifying</h2>
+			</a>
+
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item03.jpg" alt="item02"/>
+				<h2 class="item__title">Dynamic</h2>
+			</a>
+
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item04.jpg" alt="item02"/>
+				<h2 class="item__title">Dynamic</h2>
+			</a>
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item05.jpg" alt="item02"/>
+				<h2 class="item__title">Dynamic</h2>
+			</a>
+			<a href="#" class="item">
+				<img class="item__image" src="/assets/images/item06.jpg" alt="item02"/>
+				<h2 class="item__title">Dynamic</h2>
+			</a>
+
+		</section><!-- /items-wrap -->
+	</div>
+	<script src="js/classie.js"></script>
+	<script>
+		(function() {
+
+			var container = document.getElementById( 'container' ),
+				trigger = container.querySelector( 'button.trigger' );
+
+			function toggleContent() {
+				if( classie.has( container, 'container--open' ) ) {
+					classie.remove( container, 'container--open' );
+					classie.remove( trigger, 'trigger--active' );
+					window.addEventListener( 'scroll', noscroll );
+				}
+				else {
+					classie.add( container, 'container--open' );
+					classie.add( trigger, 'trigger--active' );
+					window.removeEventListener( 'scroll', noscroll );
+				}
+			}
+
+			function noscroll() {
+				window.scrollTo( 0, 0 );
+			}
+
+			// reset scrolling position
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+			// disable scrolling
+			window.addEventListener( 'scroll', noscroll );
+
+			trigger.addEventListener( 'click', toggleContent );
+
+		})();
+	</script>
+</body>
+</html>
