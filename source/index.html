@@ -7,12 +7,13 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700|Ubuntu:400,700" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 
-	<script src="js/modernizr-custom.js"></script>
-	<script src="js/classie.js"></script>
+	<script src="assets/vendor/js/modernizr-custom.js"></script>
+	<script src="assets/vendor/js/classie.js"></script>
 </head>
 <body class="home">
 	<div class="main__container home__container">
@@ -30,7 +31,42 @@
 			</div>
 		</div>
 
+		<div class="home__heading">
+			<div class="home__name">JENNETTE MCCURDY</div>
+		</div>
+
+		<div class="home__icons clearfix" id="home__icons">
+			<span><a href="https://www.facebook.com/jennettemccurdy/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></a></i></span>
+			<span><a href="https://www.instagram.com/jennettemccurdy/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+			<span><a href="https://twitter.com/jennettemccurdy" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+			<span><a href="https://www.dropbox.com" target="_blank"><i class="fa fa-dropbox" aria-hidden="true"></i></a></span>
+			<span><a href="https://www.youtube.com/channel/UC8nuJ5ZrPFl_b93zT2iHD9g" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></span>
+			<span id="home__icons-main" class="last"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+		</div>
 	</div>
 	<script src="js/menu.js"></script>
+	<script>
+		var iconButton = document.getElementById('home__icons-main');
+		var icons = document.querySelectorAll('#home__icons span');
+		console.log(icons);
+
+		var iconOpen = false;
+  		iconButton.addEventListener('click', iconHandler, false);
+  		function iconHandler() {
+  			if(!iconOpen){
+  				for (var i = 0; i < icons.length; i++) {
+  					classie.add(icons[i], 'opened-icons');
+  				}
+		    }
+		    else{
+		    	for (var i = 0; i < icons.length; i++) {
+  					classie.remove(icons[i], 'opened-icons');
+  				}
+		    }
+		    iconOpen = !iconOpen;
+  		}
+
+
+	</script>
 </body>
 </html>

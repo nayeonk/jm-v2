@@ -1,3 +1,5 @@
+@import 'variables';
+@import 'mixins';
 .home {
 	height: 100%; // TODO: check on this
 	
@@ -6,5 +8,95 @@
 		background-image: url('../assets/images/home/main_bg1580.jpg');
 		background-size: cover;
 		background-position: center top;
+		position: relative;
 	}
+	&__heading {
+		font-weight: $bold;
+		position: absolute;
+		text-align: center;
+		top: 58px;
+		width: 420px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+	}
+	&__name {
+		font-size: 33px;
+	}
+	&__icons {
+		position: absolute;
+		top: 300px;
+		margin: 80px auto 0 auto;
+		left: 0;
+		right: 0;
+		// width = num of icons * 80 + 20(padding)
+		width: 420px;
+		height: 100px;
+		padding-left: 20px;
+		span {
+			display: block;
+			float: left;
+			font-size: 2em;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			margin: 0 0 0 -20px;
+			color: rgba(225,225,225,0.95);
+			opacity: 0;
+			text-shadow: 0 -1px 1px rgba(0,0,0,0.1);
+			-moz-transition: all 0.4s ease-in-out;
+			-webkit-transition: all 0.4s ease-in-out;
+			transition: all 0.4s ease-in-out;
+			a {
+				color: rgba(225,225,225,0.95);
+			}
+		}
+		span:nth-child(odd) {
+			background: rgba(0, 0, 0, 0.8);
+		}
+		span:nth-child(even) {
+			background: rgba(50, 50, 50, 0.8);
+		}
+		span:nth-child(1) {
+			transform: translate(200%) translate(-40px);
+		}
+		span:nth-child(2) {
+			transform: translate(100%) translate(-20px);
+		}
+		span:nth-child(4) {
+			transform: translate(-100%) translate(20px);
+		}
+		span:nth-child(5) {
+			transform: translate(-200%) translate(40px);
+		}
+		span:last-child {
+			opacity: 1;
+			position: absolute;
+			background: rgba(0, 0, 0, 0.8);
+			top: 0;
+			left: 50%;
+			margin-left: -50px;
+			z-index: 10;
+
+		}
+		span.opened-icons {
+			transform: translate(0%);
+			opacity: 1;
+		}
+		span.opened-icons.last {
+			opacity: 0;
+			transform: scale(1.4);
+		}
+	}
+	&__ie {
+		transform: translate(0%);
+		opacity: 1;
+	}
+	// &__icons:hover span:last-child {
+	// 	opacity: 0;
+	// 	transform: scale(1.4);
+	// }
 }

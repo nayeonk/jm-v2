@@ -13,6 +13,13 @@ html,body {
 		font-size: 16px;
 	}
 }
+.clearfix:after, .clearfix:before {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
 /* Global styles */
 .main {
 	font-size: 14px;
@@ -204,20 +211,18 @@ html,body {
 		}
 	}
 	&__wrapper:after {
-		
-			content:".";
-			display:block;
-			font-size:2em;
-			width:6.2em;
-			height:6.2em;
-			position: absolute;
-			left: 50%;
-			margin-left: -3.1em;
-			top: 50%;
-			margin-top: -3.1em;
-			border-radius: 50%;
-			z-index:10;
-			color: transparent;
-		
+		content:".";
+		display:block;
+		font-size:2em;
+		width:6.2em;
+		height:6.2em;
+		position: absolute;
+		left: 50%;
+		margin-left: -3.1em;
+		top: 50%;
+		margin-top: -3.1em;
+		border-radius: 50%;
+		z-index:10;
+		color: transparent;
 	}
 }

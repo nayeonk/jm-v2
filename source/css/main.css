@@ -11,6 +11,13 @@ html, body {
     html, body {
       font-size: 16px; } }
 
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
 /* Global styles */
 .main {
   font-size: 14px; }
