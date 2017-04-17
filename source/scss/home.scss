@@ -5,7 +5,7 @@
 	
 	&__container {
 		height: 100%;
-		background-image: url('../assets/images/home/main_bg1580.jpg');
+		background-image: url('../assets/images/home/main_bg1700.jpg');
 		background-size: cover;
 		background-position: center top;
 		position: relative;
@@ -15,29 +15,52 @@
 		position: absolute;
 		text-align: center;
 		top: 58px;
-		width: 420px;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		left: 0;
 		right: 0;
+		@media (min-width: $breakpoint-sm) {
+			//width: 100%;
+			top: 70px;
+			width: 660px;
+		}
+		@media (min-width: $breakpoint-md) {
+			width: 880px;
+		}
 	}
 	&__name {
 		font-size: 33px;
+		@media (min-width: $breakpoint-sm) {
+			font-size: 54px; // width: 660px;
+			height: 100px;
+			line-height: 100px;
+		}
+		@media (min-width: $breakpoint-md) {
+			font-size: 76px; // width: 880px;
+		}
+		span {
+			padding-left: 35px;
+		}
 	}
 	&__icons {
 		position: absolute;
-		top: 300px;
-		margin: 80px auto 0 auto;
-		left: 0;
-		right: 0;
+		top: 0px;
+		// margin: 0px auto 0 auto;
+		// left: 0;
+		// right: 0;
+		left: 19.5%;
 		// width = num of icons * 80 + 20(padding)
 		width: 420px;
 		height: 100px;
 		padding-left: 20px;
+		@media (min-width: $breakpoint-md) {
+			left: 27.5%;
+		}
 		span {
 			display: block;
 			float: left;
-			font-size: 2em;
+			font-size: 2em;;
 			border-radius: 50%;
 			width: 100px;
 			height: 100px;
@@ -61,15 +84,23 @@
 			background: rgba(50, 50, 50, 0.8);
 		}
 		span:nth-child(1) {
+			-moz-transform: translate(200%) translate(-40px);
+			-webkit-transform: translate(200%) translate(-40px);
 			transform: translate(200%) translate(-40px);
 		}
 		span:nth-child(2) {
+			-moz-transform: translate(100%) translate(-20px);
+			-webkit-transform: translate(100%) translate(-20px);
 			transform: translate(100%) translate(-20px);
 		}
 		span:nth-child(4) {
+			-moz-transform: translate(-100%) translate(20px);
+			-webkit-transform: translate(-100%) translate(20px);
 			transform: translate(-100%) translate(20px);
 		}
 		span:nth-child(5) {
+			-moz-transform: translate(-200%) translate(40px);
+			-webkit-transform: translate(-200%) translate(40px);
 			transform: translate(-200%) translate(40px);
 		}
 		span:last-child {
@@ -80,7 +111,15 @@
 			left: 50%;
 			margin-left: -50px;
 			z-index: 10;
+			transform: scale(0.28);
 
+		}
+		span:last-child i {
+			font-size: 90px;
+			color: #777;
+		}
+		span.last:hover {
+			transform: scale(1);
 		}
 		span.opened-icons {
 			transform: translate(0%);
@@ -91,12 +130,4 @@
 			transform: scale(1.4);
 		}
 	}
-	&__ie {
-		transform: translate(0%);
-		opacity: 1;
-	}
-	// &__icons:hover span:last-child {
-	// 	opacity: 0;
-	// 	transform: scale(1.4);
-	// }
 }

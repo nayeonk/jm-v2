@@ -6,7 +6,8 @@
 html, body {
   height: 100%;
   font-size: 14px;
-  font-family: 'Ubuntu', 'Arial', sans-serif; }
+  font-family: 'Ubuntu', 'Arial', sans-serif;
+  background: #d0d0d0; }
   @media (min-width: 768px) {
     html, body {
       font-size: 16px; } }
@@ -17,6 +18,18 @@ html, body {
 
 .clearfix:after {
   clear: both; }
+
+.no-mobile {
+  display: none; }
+  @media (min-width: 768px) {
+    .no-mobile {
+      display: block; } }
+
+.no-tablet {
+  display: block; }
+  @media (min-width: 768px) {
+    .no-tablet {
+      display: none; } }
 
 /* Global styles */
 .main {
