@@ -14,7 +14,7 @@
 		font-weight: $bold;
 		position: absolute;
 		text-align: center;
-		top: 58px;
+		top: 40px;
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
@@ -22,11 +22,15 @@
 		right: 0;
 		@media (min-width: $breakpoint-sm) {
 			//width: 100%;
-			top: 70px;
+			top: 40px;
 			width: 660px;
 		}
 		@media (min-width: $breakpoint-md) {
+			top: 40px;
 			width: 880px;
+		}
+		@media (min-width: $breakpoint-lg) {
+			top: 60px;
 		}
 	}
 	&__name {
@@ -35,12 +39,19 @@
 			font-size: 54px; // width: 660px;
 			height: 100px;
 			line-height: 100px;
+			opacity: 1;
+			-moz-transition: all 0.4s ease-in;
+			-webkit-transition: all 0.4s ease-in;
+			transition: all 0.4s ease-in;
 		}
 		@media (min-width: $breakpoint-md) {
 			font-size: 76px; // width: 880px;
 		}
 		span {
 			padding-left: 35px;
+		}
+		&.fade {
+			opacity: 0;
 		}
 	}
 	&__icons {
@@ -103,31 +114,59 @@
 			-webkit-transform: translate(-200%) translate(40px);
 			transform: translate(-200%) translate(40px);
 		}
-		span:last-child {
+		span.last {
 			opacity: 1;
 			position: absolute;
 			background: rgba(0, 0, 0, 0.8);
 			top: 0;
 			left: 50%;
 			margin-left: -50px;
-			z-index: 10;
+			z-index: 9;
+			-moz-transform: scale(0.28);
+			-webkit-transform: scale(0.28);
 			transform: scale(0.28);
 
 		}
-		span:last-child i {
+		span.last i {
 			font-size: 90px;
 			color: #777;
 		}
 		span.last:hover {
+			-moz-transform: scale(1);
+			-webkit-transform: scale(1);
 			transform: scale(1);
 		}
 		span.opened-icons {
+			-moz-transform: translate(0%);
+			-webkit-transform: translate(0%);
 			transform: translate(0%);
 			opacity: 1;
 		}
 		span.opened-icons.last {
 			opacity: 0;
+			display: none;
+			-moz-transform: scale(1.4);
+			-webkit-transform: scale(1.4);
 			transform: scale(1.4);
+		}
+		&-close {
+			position: absolute;
+			right: -15px;
+			top: 0;
+			font-size: 20px;
+			opacity: 0;
+			cursor: pointer;
+			// display: none;
+			visibility: hidden;
+			-moz-transition: all 0.4s ease-in-out;
+			-webkit-transition: all 0.4s ease-in-out;
+			transition: all 0.4s ease-in-out;
+
+		}
+		&-close.opened-icons {
+			// display: block;
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

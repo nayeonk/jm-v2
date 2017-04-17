@@ -11,7 +11,7 @@
     font-weight: 700;
     position: absolute;
     text-align: center;
-    top: 58px;
+    top: 40px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -19,23 +19,33 @@
     right: 0; }
     @media (min-width: 768px) {
       .home__heading {
-        top: 70px;
+        top: 40px;
         width: 660px; } }
     @media (min-width: 1024px) {
       .home__heading {
+        top: 40px;
         width: 880px; } }
+    @media (min-width: 1366px) {
+      .home__heading {
+        top: 60px; } }
   .home__name {
     font-size: 33px; }
     @media (min-width: 768px) {
       .home__name {
         font-size: 54px;
         height: 100px;
-        line-height: 100px; } }
+        line-height: 100px;
+        opacity: 1;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in; } }
     @media (min-width: 1024px) {
       .home__name {
         font-size: 76px; } }
     .home__name span {
       padding-left: 35px; }
+    .home__name.fade {
+      opacity: 0; }
   .home__icons {
     position: absolute;
     top: 0px;
@@ -84,23 +94,46 @@
       -moz-transform: translate(-200%) translate(40px);
       -webkit-transform: translate(-200%) translate(40px);
       transform: translate(-200%) translate(40px); }
-    .home__icons span:last-child {
+    .home__icons span.last {
       opacity: 1;
       position: absolute;
       background: rgba(0, 0, 0, 0.8);
       top: 0;
       left: 50%;
       margin-left: -50px;
-      z-index: 10;
+      z-index: 9;
+      -moz-transform: scale(0.28);
+      -webkit-transform: scale(0.28);
       transform: scale(0.28); }
-    .home__icons span:last-child i {
+    .home__icons span.last i {
       font-size: 90px;
       color: #777; }
     .home__icons span.last:hover {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
       transform: scale(1); }
     .home__icons span.opened-icons {
+      -moz-transform: translate(0%);
+      -webkit-transform: translate(0%);
       transform: translate(0%);
       opacity: 1; }
     .home__icons span.opened-icons.last {
       opacity: 0;
+      display: none;
+      -moz-transform: scale(1.4);
+      -webkit-transform: scale(1.4);
       transform: scale(1.4); }
+    .home__icons-close {
+      position: absolute;
+      right: -15px;
+      top: 0;
+      font-size: 20px;
+      opacity: 0;
+      cursor: pointer;
+      visibility: hidden;
+      -moz-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    .home__icons-close.opened-icons {
+      opacity: 1;
+      visibility: visible; }
