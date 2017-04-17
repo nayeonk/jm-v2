@@ -60,7 +60,7 @@
 		// margin: 0px auto 0 auto;
 		// left: 0;
 		// right: 0;
-		left: 19.5%;
+		left: 19.5%; // because jen's name isn't perfectly centered
 		// width = num of icons * 80 + 20(padding)
 		width: 420px;
 		height: 100px;
@@ -160,15 +160,13 @@
 			font-size: 20px;
 			opacity: 0;
 			cursor: pointer;
-			// display: none;
-			visibility: hidden;
+			visibility: hidden; // to prevent click when opacity: 0
 			-moz-transition: all 0.4s ease-in-out;
 			-webkit-transition: all 0.4s ease-in-out;
 			transition: all 0.4s ease-in-out;
 
 		}
 		&-close.opened-icons {
-			// display: block;
 			opacity: 1;
 			visibility: visible;
 		}
