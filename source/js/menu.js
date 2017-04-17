@@ -1,25 +1,25 @@
 (function(){
 
-  var button = document.getElementById('menu__button'),
-    wrapper = document.getElementById('menu__wrapper');
+  var menuButton = document.getElementById('menu__button'),
+    menuWrapper = document.getElementById('menu__wrapper');
 
     //open and close menu when the button is clicked
-  var open = false;
-  button.addEventListener('click', handler, false);
+  var menuOpen = false;
+  menuButton.addEventListener('click', menuHandler, false);
 
-  function handler(){
-    if(!open){
+  function menuHandler(){
+    if(!menuOpen){
       this.innerHTML = "<br/>-";
-      classie.add(wrapper, 'opened-nav');
+      classie.add(menuWrapper, 'opened-nav');
     }
     else{
       this.innerHTML = "<br/>+";
-    classie.remove(wrapper, 'opened-nav');
+      classie.remove(menuWrapper, 'opened-nav');
     }
-    open = !open;
+    menuOpen = !menuOpen;
   }
   function closeWrapper(){
-    classie.remove(wrapper, 'opened-nav');
+    classie.remove(menuWrapper, 'opened-nav');
   }
 
 })();
