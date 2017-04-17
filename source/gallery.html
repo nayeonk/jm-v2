@@ -2,315 +2,73 @@
 <html>
 <head>
 	<title>Gallery</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<style>
-		html,body {
-			margin: 0;
-			padding: 0;
-		}
-		body {
-			background: #2a2e39;
-			color: #dbdbdb;
-		}
-		.intro {
-			position: fixed;
-			z-index: 10;
-			overflow: hidden;
-			width: 100%;
-			height: 100%;
-			background: #2a2e39;
-			transition: transform 0.6s;
-			transition-timing-funtion: cubic-bezier(0.7, 0, 0.3, 1);
-		}
-		.container--open .intro {
-			transform: translate3d(0, -100%, 0) translate3d(0, 250px, 0);
-		}
-		.intro__image {
-			position: absolute;
-			bottom: 0;
-			min-width: 100%;
-			min-height: 120%;
-			width: auto;
-			height: auto;
-			opacity: 0.8;
-			transition: transform 0.6s, opacity 0.6s;
-			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-		}
-
-		.container--open .intro__image {
-			opacity: 0;
-			transform: translate3d(0, 20%, 0);
-		}
-		.intro__content {
-			position: absolute;
-			bottom: 0;
-			padding: 1.8em;
-			width: 100%;
-			font-size: 1.15em;
-		}
-		.intro__title {
-			margin: 0 0 20px;
-			font-weight: 900;
-			font-size: 4em;
-			font-family: "Playfair Display", Georgia, serif;
-			line-height: 1;
-		}
-		.intro__subtitle {
-			display: flex;
-			align-items: center;
-		}
-		.intro__description {
-			/*margin: 0 auto 0 1em;*/
-			margin: 0 54% 0 1em;
-			line-height: 1.2;
-		}
-		.trigger {
-			position: relative;
-			overflow: hidden;
-			margin: 0 0 0 20px;
-			padding: 0;
-			width: 40px;
-			height: 40px;
-			outline: none;
-			border: none;
-			background: none;
-			flex: none;
-			-webkit-flex: none;
-		}
-		.trigger span {
-			position: absolute;
-			top: 100%;
-		}
-		.icon rect, .icon line {
-			stroke: #dbdbdb;
-			fill: none;
-			stroke-width: 2px;
-		}
-		.icon {
-			-webkit-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
-			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-			transition: opacity 0.3s, transform 0.3s;
-		}
-		.icon--cross,
-		.trigger--active .icon--grid {
-			opacity: 0;
-			transform: scale3d(0.5, 0.5, 1);
-		}
-
-		.trigger--active .icon--cross {
-			opacity: 1;
-			transform: scale3d(1, 1, 1);
-		}
-		.items-wrap {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			padding: 250px 5px 0;
-		}
-		.items-wrap::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: #2a2e39;
-			content: '';
-			opacity: 1;
-			transition: opacity 0.6s;
-			transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-			pointer-events: none;
-		}
-
-		.container--open .items-wrap::after {
-			opacity: 0;
-		}
-
-		.item {
-			position: relative;
-			overflow: hidden;
-			height: 22vw;
-			flex: 1 0 25%;
-			outline: none;
-			border: 5px solid #2a2e39;
-			border-width: 0 5px 10px;
-			background: #2a2e39;
-		}
-
-		.item__image {
-			position: absolute;
-			top: 50%;
-			left: 0;
-			min-height: 100%;
-			width: 100%;
-			opacity: 0.7;
-			transition: transform 0.5s, opacity 0.5s;
-			transform: translate3d(0, -50%, 0) scale3d(1.2, 1.2, 1);
-		}
-
-		.item:hover .item__image {
-			opacity: 1;
-			transform: translate3d(0, -50%, 0);
-		}
-		.item__title {
-			position: absolute;
-			bottom: 0;
-			margin: 0;
-			padding: 1em;
-			color: #dbdbdb;
-			font-size: 1.85em;
-			font-family: "Playfair Display", Georgia, serif;
-			line-height: 1;
-			transition: transform 0.3s, opacity 0.3s;
-		}
-
-		.item:hover .item__title {
-			opacity: 0;
-			transform: translate3d(0, 20px, 0);
-		}
-		.cn-nav {
-			position: absolute;
-			width: 75%;
-			margin-right: auto;
-			margin-left: auto;
-			left:0;
-			right:0;
-			top: 60%;
-		}
-		.cn-nav > a{
-		    position: absolute;
-		    top: 0px;
-		    height: 70px;
-		    width: 70px;
-		}
-		a.cn-nav-prev{
-		    left: 0px;
-		}
-		a.cn-nav-next{
-		    right: 0px;
-		}
-		.cn-nav a span{
-		    width: 46px;
-		    height: 46px;
-		    display: block;
-		    text-indent: -9000px;
-		    -moz-border-radius: 23px;
-		    -webkit-border-radius: 23px;
-		    border-radius: 23px;
-		    cursor: pointer;
-		    opacity: 0.9;
-		    position: absolute;
-		    top: 50%;
-		    left: 50%;
-		    background-size: 17px 25px;
-		    margin: -23px 0 0 -23px;
-		    -webkit-transition: all 0.4s ease;
-			-moz-transition: all 0.4s ease;
-			-o-transition: all 0.4s ease;
-			-ms-transition: all 0.4s ease;
-			transition: all 0.4s ease;
-		}
-		.cn-nav a.cn-nav-prev span{
-		    background: #666 url(/assets/images/prev.png) no-repeat center center;
-		}
-		.cn-nav a.cn-nav-next span{
-		    background: #666 url(/assets/images/next.png) no-repeat center center;
-		}
-		.cn-nav a div{
-		    width: 0px;
-		    height: 0px;
-		    position: absolute;
-		    top: 50%;
-		    left: 50%;
-		    overflow: hidden;
-		    background-size: 100% 100%;
-		    background-position: center center;
-		    background-repeat: no-repeat;
-		    margin: 0px;
-		    -moz-border-radius: 0px;
-		    -webkit-border-radius: 0px;
-		    border-radius: 0px; 
-		    -webkit-transition: all 0.2s ease-out;
-			-moz-transition: all 0.2s ease-out;
-			-o-transition: all 0.2s ease-out;
-			-ms-transition: all 0.2s ease-out;
-			transition: all 0.2s ease-out;
-		}
-		.cn-nav a:hover span{
-		    width: 100px;
-		    height: 100px;
-		    -moz-border-radius: 50px;
-		    -webkit-border-radius: 50px;
-		    border-radius: 50px;
-		    opacity: 0.6;
-		    margin: -50px 0 0 -50px;
-		    background-size: 22px 32px;
-		    background-color:#a8872d;
-		}
-		.cn-nav a:hover div{
-		    width: 90px;
-		    height: 90px;
-		    background-size: 120% 120%;
-		    margin: -45px 0 0 -45px;
-		    -moz-border-radius: 45px;
-		    -webkit-border-radius: 45px;
-		    border-radius: 45px; 
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
 	<script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 </head>
-<body>
-	<div class="container" id="container">
+<body class="gallery">
+	<div class="main__container gallery__container" id="container">
+
 		<header class="intro">
-
-			<img class="intro__image" src="/assets/images/header-glacier.jpg" alt="Iceland glacier"/>
-
-			<div class="cn-nav">
-				<a href="#" class="cn-nav-prev">
-					<span>Previous</span>
-					<div style="background-image:url(/assets/images/item04-thumb.jpg);"></div> 
-				</a>
-				<a href="#" class="cn-nav-next">
-					<span>Next</span>
-					<div style="background-image:url(../assets/images/item01-thumb.jpg);"></div>
-				</a>
+			<div class="intro__image-wrap">
+			<img class="intro__image" src="assets/images/gallery/item01.jpg" alt="Iceland glacier"/>
 			</div>
+
+			<div class="bar">
+				<div class="nav">
+					<a href="#" class="nav__prev">
+						<span>Previous</span>
+						<div style="background-image:url(assets/images/gallery/item09-thumb.jpg);"></div> 
+					</a>
+					<a href="#" class="nav__next">
+						<span>Next</span>
+						<div style="background-image:url(assets/images/gallery/item02-thumb.jpg);"></div>
+					</a>
+				</div>
+				<div class="nav__content">
+					<div class="nav__content-prev">
+						<span>Previous Image</span>
+					</div>
+					<div class="nav__content-current">
+						<span>Currently Viewing</span>
+						<a class="nav__content-link1" href="assets/images/gallery/item01-thumb.jpg" target="_blank">500x500</a>
+						<a class="nav__content-link2" href="assets/images/gallery/item01.jpg" target="_blank">1024x768</a>
+						<a class="nav__content-link3" href="assets/images/gallery/item01.jpg" target="_blank">1920x1080</a>
+					</div>
+					<div class="nav__content-next">
+						<span>Next Image</span>
+					</div>
+				</div>
+			</div>
+
+			<button class="trigger">
+
+				<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+					<g class="icon icon--grid">
+						<rect x="32.5" y="5.5" width="22" height="22"/>
+						<rect x="4.5" y="5.5" width="22" height="22"/>
+						<rect x="32.5" y="33.5" width="22" height="22"/>
+						<rect x="4.5" y="33.5" width="22" height="22"/>
+					</g>
+					<g class="icon icon--cross">
+						<line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
+						<line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
+					</g>
+				</svg>
+
+				<span>View content</span>
+
+			</button>
 
 			<div class="intro__content">
 
-				<h1 class="intro__title">Photo Gallery</h1>
-
-				<div class="intro__subtitle">
-
-					<div class="codrops-links">
-						<!-- links -->
-					</div>
-
-					<div class="intro__description"> A short description could go here, if needed. Hello! </div>
-
-					<button class="trigger">
-
-						<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-							<g class="icon icon--grid">
-								<rect x="32.5" y="5.5" width="22" height="22"/>
-								<rect x="4.5" y="5.5" width="22" height="22"/>
-								<rect x="32.5" y="33.5" width="22" height="22"/>
-								<rect x="4.5" y="33.5" width="22" height="22"/>
-							</g>
-							<g class="icon icon--cross">
-								<line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
-								<line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
-							</g>
-						</svg>
-
-						<span>View content</span>
-
-					</button>
-
-				</div><!-- /intro__subtitle -->
+				
 
 			</div><!-- /intro__content -->
 
@@ -319,35 +77,48 @@
 		<section class="items-wrap">
 
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item01.jpg" alt="item01"/>
-				<h2 class="item__title">Magnificence</h2>
+				<img class="item__image" src="assets/images/gallery/item01-thumb.jpg" alt="item01"/>
+				<!-- <h2 class="item__title">Magnificence</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item02.jpg" alt="item02"/>
-				<h2 class="item__title">Electrifying</h2>
+				<img class="item__image" src="assets/images/gallery/item02-thumb.jpg" alt="item02"/>
+				<!-- <h2 class="item__title">Electrifying</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item03.jpg" alt="item02"/>
-				<h2 class="item__title">Dynamic</h2>
+				<img class="item__image" src="assets/images/gallery/item03-thumb.jpg" alt="item02"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item04.jpg" alt="item02"/>
-				<h2 class="item__title">Dynamic</h2>
+				<img class="item__image" src="assets/images/gallery/item04-thumb.jpg" alt="item02"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item05.jpg" alt="item02"/>
-				<h2 class="item__title">Dynamic</h2>
+				<img class="item__image" src="assets/images/gallery/item05-thumb.jpg" alt="item02"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="/assets/images/item06.jpg" alt="item02"/>
-				<h2 class="item__title">Dynamic</h2>
+				<img class="item__image" src="assets/images/gallery/item06-thumb.jpg" alt="item06"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
+			</a>
+			<a href="#" class="item">
+				<img class="item__image" src="assets/images/gallery/item07-thumb.jpg" alt="item07"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
+			</a>
+			<a href="#" class="item">
+				<img class="item__image" src="assets/images/gallery/item08-thumb.jpg" alt="item08"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
+			</a>
+			<a href="#" class="item">
+				<img class="item__image" src="assets/images/gallery/item09-thumb.jpg" alt="item09"/>
+				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
 		</section><!-- /items-wrap -->
 	</div>
+
 	<script src="js/classie.js"></script>
 	<script>
 		(function() {
@@ -356,13 +127,13 @@
 				trigger = container.querySelector( 'button.trigger' );
 
 			function toggleContent() {
-				if( classie.has( container, 'container--open' ) ) {
-					classie.remove( container, 'container--open' );
+				if( classie.has( container, 'gallery__container--open' ) ) {
+					classie.remove( container, 'gallery__container--open' );
 					classie.remove( trigger, 'trigger--active' );
 					window.addEventListener( 'scroll', noscroll );
 				}
 				else {
-					classie.add( container, 'container--open' );
+					classie.add( container, 'gallery__container--open' );
 					classie.add( trigger, 'trigger--active' );
 					window.removeEventListener( 'scroll', noscroll );
 				}
@@ -384,44 +155,64 @@
 
 		$(document).ready( function() {
 			var index = 0;
+			var nextIndex = 1;
 
 			// Next stuff
 			var images = [
-				'header-glacier.jpg',
-				'item01.jpg',
-				'item02.jpg',
-				'item03.jpg',
-				'item04.jpg'
+				'item01',
+				'item02',
+				'item03',
+				'item04',
+				'item05',
+				'item06',
+				'item07',
+				'item08',
+				'item09'
 			]
 			
-			$('.cn-nav-prev').click(function(event) {
+			$('.nav__prev').click(function(event) {
 				event.preventDefault();
 
 				if (index == 0) {
-					index = 5; // need to make dynamic later
+					index = 8; // need to make dynamic later
 				}
 				index--;
-				$('.intro__image').attr('src', '/assets/images/' + images[index]);
+				$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
+				$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
+				$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+				$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
 
 				if (index == 0) {
-					index = 5;
+					index = 8;
 				}
-				$('.cn-nav-prev div').css('background-image', 'url(/assets/images/' + images[index-1] + ')')
+				$('.nav__prev div').css('background-image', 'url(assets/images/gallery/' + images[index-1] + '-thumb.jpg)')
 			});
 
-			$('.cn-nav-next').click(function(event) {
+			$('.nav__next').click(function(event) {
 				event.preventDefault();
 
-				if (index == 5) {
+				if (index == 8) {
 					index = 0; // need to make dynamic later
 				}
 				index++;
-				$('.intro__image').attr('src', '/assets/images/' + images[index]);
+				$('.intro__image-wrap').fadeOut(300, function() {
+					$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
+					$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
+					$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+					$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+					
+				}).delay(100).fadeIn(300);
+				
+				
 
-				if (index == 4) {
-					index = -1;
+				if (nextIndex == 8) {
+					nextIndex = -1;
 				}
-				$('.cn-nav-next div').css('background-image', 'url(/assets/images/' + images[index+1] + ')')
+
+				nextIndex++;
+
+				$('.nav__next div').css('background-image', 'url(assets/images/gallery/' + images[nextIndex] + '-thumb.jpg)');
+				
 			});
 		});
 	</script>

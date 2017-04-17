@@ -7,6 +7,8 @@
 }
 .menu {
 	font-family: 'Lato', Arial, sans-serif;
+	font-family: 'Philosopher', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	position: relative;
 	height: 100px;
 }
@@ -24,13 +26,15 @@
 	border: none;
 	border-radius: 50%;
 	background: none;
-	background-color: #fff;
+	background-color: rgba(0,0,0,0.75);
 	color: #52be7f;
+	color: white;
 	text-align: center;
 	font-weight: 700;
 	font-size: 1.5em;
 	text-transform: uppercase;
 	cursor: pointer;
+	outline: 0;
 	-webkit-backface-visibility: hidden;
 }
 .csstransforms .cn-wrapper {
@@ -67,7 +71,7 @@
   position: absolute;
   left: 50%;
   margin-left: -3.1em;
-  top:50%;
+  top: 50%;
   margin-top: -3.1em;
   border-radius: 50%;
   z-index:10;
@@ -116,10 +120,10 @@
 	width: 14.5em;
 	height: 14.5em;
 	border-radius: 50%;
-	background: #429a67;
-	background: -webkit-radial-gradient(transparent 35%, #429a67 35%);
-	background: -moz-radial-gradient(transparent 35%, #429a67 35%);
-	background: radial-gradient(transparent 35%, #429a67 35%);
+	/*background: #429a67;*/
+	background: -webkit-radial-gradient(transparent 35%, rgba(0,0,0,0.75) 35%);
+	background: -moz-radial-gradient(transparent 35%, rgba(0,0,0,0.75)  35%);
+	background: radial-gradient(transparent 35%, rgba(0,0,0,0.75)  35%);
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
@@ -138,7 +142,6 @@
 	top: 1em;
 	display: block;
 	font-size: .5em;
-	font-weight: 700;
 	text-transform: uppercase;
 	transform:rotate(-180deg);
 }
@@ -148,56 +151,56 @@
 	transition: all .3s ease .3s;
 }
 .csstransforms .opened-nav li:first-child {
-	-webkit-transform: rotate(-20deg) skew(60deg);
-	-moz-transform: rotate(-20deg) skew(60deg);
-	-ms-transform: rotate(-20deg) skew(60deg);
-	transform: rotate(-20deg) skew(60deg);
+	-webkit-transform: rotate(332deg) skew(62deg);
+	-moz-transform: rotate(332deg) skew(62deg);
+	-ms-transform: rotate(332deg) skew(62deg);
+	transform: rotate(332deg) skew(62deg);
 	/*transform: rotate(-200deg) skew(60deg);*/
 	/*transform: rotate(330deg) skew(60deg);*/
-	transform: rotate(330deg) skew(62deg);
+	transform: rotate(332deg) skew(62deg);
 }
 .csstransforms .opened-nav li:nth-child(2) {
-	-webkit-transform: rotate(12deg) skew(60deg);
-	-moz-transform: rotate(12deg) skew(60deg);
-	-ms-transform: rotate(12deg) skew(60deg);
+	-webkit-transform: rotate(302deg) skew(62deg);
+	-moz-transform: rotate(302deg) skew(62deg);
+	-ms-transform: rotate(302deg) skew(62deg);
 	/*transform: rotate(12deg) skew(60deg);*/
 	/*transform: rotate(-168deg) skew(60deg);*/
 	/*transform: rotate(295deg) skew(60deg);*/
-	transform: rotate(300deg) skew(62deg);
+	transform: rotate(302deg) skew(62deg);
 }
 
 .csstransforms .opened-nav  li:nth-child(3) {
-	-webkit-transform: rotate(44deg) skew(60deg);
-	-moz-transform: rotate(44deg) skew(60deg);
-	-ms-transform: rotate(44deg) skew(60deg);
+	-webkit-transform: rotate(272deg) skew(62deg);
+	-moz-transform: rotate(272deg) skew(62deg);
+	-ms-transform: rotate(272deg) skew(62deg);
 	/*transform: rotate(44deg) skew(60deg);*/
 	/*transform: rotate(260deg) skew(60deg);*/
-	transform: rotate(270deg) skew(62deg);
+	transform: rotate(272deg) skew(62deg);
 }
 
 .csstransforms .opened-nav li:nth-child(4) {
-	-webkit-transform: rotate(76deg) skew(60deg);
-	-moz-transform: rotate(76deg) skew(60deg);
-	-ms-transform: rotate(76deg) skew(60deg);
+	-webkit-transform: rotate(241deg) skew(62deg);
+	-moz-transform: rotate(241deg) skew(62deg);
+	-ms-transform: rotate(241deg) skew(62deg);
 	/*transform: rotate(76deg) skew(60deg);*/
 	/*transform: rotate(-104deg) skew(60deg);*/
 	/*transform: rotate(230deg) skew(60deg);*/
-	transform: rotate(240deg) skew(62deg);
+	transform: rotate(241deg) skew(62deg);
 }
 
 .csstransforms .opened-nav li:nth-child(5) {
-	-webkit-transform: rotate(108deg) skew(60deg);
-	-moz-transform: rotate(108deg) skew(60deg);
-	-ms-transform: rotate(108deg) skew(60deg);
+	-webkit-transform: rotate(210deg) skew(62deg);
+	-moz-transform: rotate(210deg) skew(62deg);
+	-ms-transform: rotate(210deg) skew(62deg);
 	/*transform: rotate(108deg) skew(60deg);*/
 	/*transform: rotate(190deg) skew(60deg);*/
 	transform: rotate(210deg) skew(62deg);
 }
 
 .csstransforms .opened-nav li:nth-child(6) {
-	-webkit-transform: rotate(140deg) skew(60deg);
-	-moz-transform: rotate(140deg) skew(60deg);
-	-ms-transform: rotate(140deg) skew(60deg);
+	-webkit-transform: rotate(180deg) skew(62deg);
+	-moz-transform: rotate(180deg) skew(62deg);
+	-ms-transform: rotate(180deg) skew(62deg);
 	/*transform: rotate(140deg) skew(60deg);*/
 	/*transform: rotate(155deg) skew(60deg);*/
 	transform: rotate(180deg) skew(62deg);

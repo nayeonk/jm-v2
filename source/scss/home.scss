@@ -1,0 +1,10 @@
+.home {
+	height: 100%; // TODO: check on this
+	
+	&__container {
+		height: 100%;
+		background-image: url('../assets/images/home/main_bg1580.jpg');
+		background-size: cover;
+		background-position: center top;
+	}
+}

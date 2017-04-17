@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>fade test</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	<img class="intro__image" src="assets/images/gallery/item01.jpg" alt="Iceland glacier"/>
+
+	<button id="btn">Click me</button>
+
+	<script>
+		$('#btn').on('click', function() {
+			$('.intro__image').fadeOut();	
+			$('.intro__image').fadeIn();	
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.home {
+  height: 100%; }
+  .home__container {
+    height: 100%;
+    background-image: url("../assets/images/home/main_bg1580.jpg");
+    background-size: cover;
+    background-position: center top; }
