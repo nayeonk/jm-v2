@@ -80,6 +80,7 @@
 			margin: 0 0 0 -20px;
 			color: rgba(225,225,225,0.95);
 			opacity: 0;
+			visibility: hidden;
 			text-shadow: 0 -1px 1px rgba(0,0,0,0.1);
 			-moz-transition: all 0.4s ease-in-out;
 			-webkit-transition: all 0.4s ease-in-out;
@@ -116,6 +117,7 @@
 		}
 		span.last {
 			opacity: 1;
+			visibility: visible;
 			position: absolute;
 			background: rgba(0, 0, 0, 0.8);
 			top: 0;
@@ -141,10 +143,12 @@
 			-webkit-transform: translate(0%);
 			transform: translate(0%);
 			opacity: 1;
+			visibility: visible;
 		}
 		span.opened-icons.last {
 			opacity: 0;
-			display: none;
+			// display: none;
+			visibility: hidden;
 			-moz-transform: scale(1.4);
 			-webkit-transform: scale(1.4);
 			transform: scale(1.4);
