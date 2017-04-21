@@ -1,8 +1,5 @@
 /* ----- VARIABLES---- */
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
+/* Global styles */
 html, body {
   height: 100%;
   font-size: 14px;
@@ -11,6 +8,13 @@ html, body {
   @media (min-width: 768px) {
     html, body {
       font-size: 16px; } }
+
+.main__container {
+  width: 100%; }
+  @media (min-width: 1800px) {
+    .main__container {
+      width: 1800px;
+      margin: 0 auto; } }
 
 .clearfix:after, .clearfix:before {
   content: " ";
@@ -30,19 +34,6 @@ html, body {
   @media (min-width: 768px) {
     .no-tablet {
       display: none; } }
-
-/* Global styles */
-.main {
-  font-size: 14px; }
-  @media (min-width: 768px) {
-    .main {
-      font-size: 16px; } }
-  .main__container {
-    width: 100%; }
-    @media (min-width: 1800px) {
-      .main__container {
-        width: 1800px;
-        margin: 0 auto; } }
 
 /* Menu styles - note: might move to separate file */
 .menu {

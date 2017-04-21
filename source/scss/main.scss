@@ -1,9 +1,10 @@
 @import 'variables';
 @import 'mixins';
 
+/* Global styles */
 * {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	// -moz-box-sizing: border-box;
+	// box-sizing: border-box;
 }
 html,body {
 	height: 100%;
@@ -14,6 +15,16 @@ html,body {
 		font-size: 16px;
 	}
 }
+.main {
+	&__container {
+		width: 100%;
+		@media (min-width: $breakpoint-max) {
+			width: 1800px;
+			margin: 0 auto;
+		}
+	}
+}
+
 .clearfix:after, .clearfix:before {
 	content: " ";
 	display: table;
@@ -31,21 +42,6 @@ html,body {
 	display: block;
 	@media (min-width: $breakpoint-sm) {
 		display: none;
-	}
-}
-/* Global styles */
-.main {
-	font-size: 14px;
-	@media (min-width: $breakpoint-sm) {
-		font-size: 16px;
-	} 
-	&__container {
-		width: 100%;
-
-		@media (min-width: $breakpoint-max) {
-			width: 1800px;
-			margin: 0 auto;
-		}
 	}
 }
 

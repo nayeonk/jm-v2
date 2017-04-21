@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gallery</title>
+	<title>Jennette McCurdy - Gallery</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700|Ubuntu:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/gallery.css">
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+	<script src="assets/vendor/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/vendor/js/classie.js"></script>
 </head>
 <body class="gallery">
 	<div class="main__container gallery__container" id="container">
 
+		<div class="menu">
+			<button class="menu__button" id="menu__button"><br/>+</button>
+			<div class="menu__wrapper" id="menu__wrapper">
+			   <ul>
+			       <li><a href="#"><span>Home</span></a></li>
+			       <li><a href="#"><span>Interests</span></a></li>
+			       <li><a href="#"><span>Projects</span></a></li>
+			       <li><a href="#"><span>Connect</span></a></li>
+			       <li><a href="#"><span>Photos</span></a></li>
+			       <li><a href="#"><span>Videos</span></a></li>
+			   </ul>
+			</div>
+		</div>
+
 		<header class="intro">
 			<div class="intro__image-wrap">
-			<img class="intro__image" src="assets/images/gallery/item01.jpg" alt="Iceland glacier"/>
+				<img class="intro__image slide fade" src="assets/images/gallery/item1.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item2.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item3.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item4.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item5.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item6.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item7.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item8.jpg" />
+				<img class="intro__image slide fade" src="assets/images/gallery/item9.jpg" />
 			</div>
 
 			<div class="bar">
 				<div class="nav">
-					<a href="#" class="nav__prev">
+					<a href="#" class="nav__prev" onclick="plusSlides(-1)">
 						<span>Previous</span>
-						<div style="background-image:url(assets/images/gallery/item09-thumb.jpg);"></div> 
+						<div style="background-image:url(assets/images/gallery/item9-thumb.jpg);"></div> 
 					</a>
-					<a href="#" class="nav__next">
+					<a href="#" class="nav__next" onclick="plusSlides(1)">
 						<span>Next</span>
-						<div style="background-image:url(assets/images/gallery/item02-thumb.jpg);"></div>
+						<div style="background-image:url(assets/images/gallery/item2-thumb.jpg);"></div>
 					</a>
 				</div>
 				<div class="nav__content">
@@ -78,49 +101,50 @@
 		<section class="items-wrap">
 
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item01-thumb.jpg" alt="item01"/>
+				<img class="item__image" src="assets/images/gallery/item1-thumb.jpg" alt="item01"/>
 				<!-- <h2 class="item__title">Magnificence</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item02-thumb.jpg" alt="item02"/>
+				<img class="item__image" src="assets/images/gallery/item2-thumb.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Electrifying</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item03-thumb.jpg" alt="item02"/>
+				<img class="item__image" src="assets/images/gallery/item3-thumb.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item04-thumb.jpg" alt="item02"/>
+				<img class="item__image" src="assets/images/gallery/item4-thumb.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item05-thumb.jpg" alt="item02"/>
+				<img class="item__image" src="assets/images/gallery/item5-thumb.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item06-thumb.jpg" alt="item06"/>
+				<img class="item__image" src="assets/images/gallery/item6-thumb.jpg" alt="item06"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item07-thumb.jpg" alt="item07"/>
+				<img class="item__image" src="assets/images/gallery/item7-thumb.jpg" alt="item07"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item08-thumb.jpg" alt="item08"/>
+				<img class="item__image" src="assets/images/gallery/item8-thumb.jpg" alt="item08"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 			<a href="#" class="item">
-				<img class="item__image" src="assets/images/gallery/item09-thumb.jpg" alt="item09"/>
+				<img class="item__image" src="assets/images/gallery/item9-thumb.jpg" alt="item09"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
 		</section><!-- /items-wrap -->
 	</div>
 
-	<script src="js/classie.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/slideshow.js"></script>
 	<script>
 		(function() {
 
@@ -154,68 +178,69 @@
 
 		})();
 
-		$(document).ready( function() {
-			var index = 0;
-			var nextIndex = 1;
 
-			// Next stuff
-			var images = [
-				'item01',
-				'item02',
-				'item03',
-				'item04',
-				'item05',
-				'item06',
-				'item07',
-				'item08',
-				'item09'
-			]
+		// $(document).ready( function() {
+		// 	var index = 0;
+		// 	var nextIndex = 1;
+
+		// 	// Next stuff
+		// 	var images = [
+		// 		'item01',
+		// 		'item02',
+		// 		'item03',
+		// 		'item04',
+		// 		'item05',
+		// 		'item06',
+		// 		'item07',
+		// 		'item08',
+		// 		'item09'
+		// 	]
 			
-			$('.nav__prev').click(function(event) {
-				event.preventDefault();
+		// 	$('.nav__prev').click(function(event) {
+		// 		event.preventDefault();
 
-				if (index == 0) {
-					index = 8; // need to make dynamic later
-				}
-				index--;
-				$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
-				$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
-				$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-				$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 		if (index == 0) {
+		// 			index = 8; // need to make dynamic later
+		// 		}
+		// 		index--;
+		// 		$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 		$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
+		// 		$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 		$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
 
-				if (index == 0) {
-					index = 8;
-				}
-				$('.nav__prev div').css('background-image', 'url(assets/images/gallery/' + images[index-1] + '-thumb.jpg)')
-			});
+		// 		if (index == 0) {
+		// 			index = 8;
+		// 		}
+		// 		$('.nav__prev div').css('background-image', 'url(assets/images/gallery/' + images[index-1] + '-thumb.jpg)')
+		// 	});
 
-			$('.nav__next').click(function(event) {
-				event.preventDefault();
+		// 	$('.nav__next').click(function(event) {
+		// 		event.preventDefault();
 
-				if (index == 8) {
-					index = 0; // need to make dynamic later
-				}
-				index++;
-				$('.intro__image-wrap').fadeOut(300, function() {
-					$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
-					$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
-					$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-					$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 		if (index == 8) {
+		// 			index = 0; // need to make dynamic later
+		// 		}
+		// 		index++;
+		// 		$('.intro__image-wrap').fadeOut(300, function() {
+		// 			$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 			$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
+		// 			$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
+		// 			$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
 					
-				}).delay(100).fadeIn(300);
+		// 		}).delay(100).fadeIn(300);
 				
 				
 
-				if (nextIndex == 8) {
-					nextIndex = -1;
-				}
+		// 		if (nextIndex == 8) {
+		// 			nextIndex = -1;
+		// 		}
 
-				nextIndex++;
+		// 		nextIndex++;
 
-				$('.nav__next div').css('background-image', 'url(assets/images/gallery/' + images[nextIndex] + '-thumb.jpg)');
+		// 		$('.nav__next div').css('background-image', 'url(assets/images/gallery/' + images[nextIndex] + '-thumb.jpg)');
 				
-			});
-		});
+		// 	});
+		// });
 	</script>
 </body>
 </html>
