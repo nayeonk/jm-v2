@@ -155,6 +155,12 @@ html,body {
 			backface-visibility: hidden;
 			pointer-events: auto;
 		}
+		li a:hover {
+			background: #000;
+			background: -webkit-radial-gradient(transparent 35%, rgba(0,0,0,0.4) 35%);
+			background: -moz-radial-gradient(transparent 35%, rgba(0,0,0,0.4)  35%);
+			background: radial-gradient(transparent 35%, rgba(0,0,0,0.4)  35%);
+		}
 		li a span {
 			position: relative;
 			top: 1em;

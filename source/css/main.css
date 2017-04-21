@@ -136,6 +136,11 @@ html, body {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       pointer-events: auto; }
+    .menu__wrapper li a:hover {
+      background: #000;
+      background: -webkit-radial-gradient(transparent 35%, rgba(0, 0, 0, 0.4) 35%);
+      background: -moz-radial-gradient(transparent 35%, rgba(0, 0, 0, 0.4) 35%);
+      background: radial-gradient(transparent 35%, rgba(0, 0, 0, 0.4) 35%); }
     .menu__wrapper li a span {
       position: relative;
       top: 1em;
