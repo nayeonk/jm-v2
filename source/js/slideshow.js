@@ -1,6 +1,7 @@
 var slideIndex = 1;
 var nextSlideIndex = 0;
 var prevSlideIndex = 0;
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -46,3 +47,11 @@ function showSlides(n) {
 	document.querySelector('.nav__content-link-hd').href = imagePath + slideIndex + '_1080.jpg';
 	document.querySelector('.nav__content-link-4k').href = imagePath + slideIndex + '_2160.jpg';
 }
+
+// Change slide according to which item user has clicked on
+$('.item').on('click', function() {
+	var itemIndex = $(this).data('index');
+	console.log(itemIndex);
+	toggleContent();
+	// showSlides(itemIndex);
+});

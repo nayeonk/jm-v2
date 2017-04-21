@@ -100,42 +100,42 @@
 
 		<section class="items-wrap">
 
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="1">
 				<img class="item__image" src="assets/images/gallery/1_500.jpg" alt="item01"/>
 				<!-- <h2 class="item__title">Magnificence</h2> -->
 			</a>
 
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="2">
 				<img class="item__image" src="assets/images/gallery/2_500.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Electrifying</h2> -->
 			</a>
 
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="3">
 				<img class="item__image" src="assets/images/gallery/3_500.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="4">
 				<img class="item__image" src="assets/images/gallery/4_500.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="5">
 				<img class="item__image" src="assets/images/gallery/5_500.jpg" alt="item02"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="6">
 				<img class="item__image" src="assets/images/gallery/6_500.jpg" alt="item06"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="7">
 				<img class="item__image" src="assets/images/gallery/7_500.jpg" alt="item07"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="8">
 				<img class="item__image" src="assets/images/gallery/8_500.jpg" alt="item08"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
-			<a href="#" class="item">
+			<a href="#" class="item" data-index="9">
 				<img class="item__image" src="assets/images/gallery/9_500.jpg" alt="item09"/>
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
@@ -143,104 +143,102 @@
 		</section><!-- /items-wrap -->
 	</div>
 
+	<script src="assets/vendor/js/jquery-3.2.1.min.js"></script>
 	<script src="js/menu.js"></script>
-	<script src="js/slideshow.js"></script>
+	
 	<script>
-		(function() {
+		// (function() {
 
-			var container = document.getElementById( 'container' ),
-				trigger = container.querySelector( 'button.trigger' );
+		var container = document.getElementById( 'container' ),
+			trigger = container.querySelector( 'button.trigger' );
 
-			function toggleContent() {
-				if( classie.has( container, 'gallery__container--open' ) ) {
-					classie.remove( container, 'gallery__container--open' );
-					classie.remove( trigger, 'trigger--active' );
-					window.addEventListener( 'scroll', noscroll );
-				}
-				else {
-					classie.add( container, 'gallery__container--open' );
-					classie.add( trigger, 'trigger--active' );
-					window.removeEventListener( 'scroll', noscroll );
-				}
+		function toggleContent() {
+			if( classie.has( container, 'gallery__container--open' ) ) {
+				classie.remove( container, 'gallery__container--open' );
+				classie.remove( trigger, 'trigger--active' );
+				window.addEventListener( 'scroll', noscroll );
+			}
+			else {
+				classie.add( container, 'gallery__container--open' );
+				classie.add( trigger, 'trigger--active' );
+				window.removeEventListener( 'scroll', noscroll );
+			}
+		}
+
+		function noscroll() {
+			window.scrollTo( 0, 0 );
+		}
+
+		// reset scrolling position
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+		// disable scrolling
+		window.addEventListener( 'scroll', noscroll );
+
+		trigger.addEventListener( 'click', toggleContent );
+
+
+		// Manage slides
+		var slideIndex = 1;
+		var nextSlideIndex = 0;
+		var prevSlideIndex = 0;
+
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex = slideIndex + n);
+		}
+
+		function showSlides(n) {
+			// Change the main slide
+			var slides = document.querySelectorAll('.slide');
+
+			if (n > slides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = slides.length;
+			}
+			for(var i = 0; i < slides.length; i++) {
+				slides[i].style.display = 'none';
+			}
+			slides[slideIndex-1].style.display = "block";
+
+			// Change the thumbnails of next/prev icons
+			var prev = document.querySelector('.nav__prev div');
+			var next = document.querySelector('.nav__next div');
+
+			nextSlideIndex = slideIndex + 1;
+			prevSlideIndex = slideIndex - 1;
+
+			if(nextSlideIndex > slides.length) {
+				nextSlideIndex = 1;
+			}
+			if(prevSlideIndex < 1) {
+				prevSlideIndex = slides.length;
 			}
 
-			function noscroll() {
-				window.scrollTo( 0, 0 );
-			}
+			next.style.backgroundImage = 'url(assets/images/gallery/' + nextSlideIndex +'_500.jpg)';
+			prev.style.backgroundImage = 'url(assets/images/gallery/' + prevSlideIndex +'_500.jpg)';
 
-			// reset scrolling position
-			document.body.scrollTop = document.documentElement.scrollTop = 0;
+			// Change the links for each
+			var imagePath = 'assets/images/gallery/';
+			document.querySelector('.nav__content-link-mobile').href = imagePath + slideIndex + '_1920.jpg';
+			document.querySelector('.nav__content-link-tablet').href = imagePath + slideIndex + '_2048.jpg';
+			document.querySelector('.nav__content-link-hd').href = imagePath + slideIndex + '_1080.jpg';
+			document.querySelector('.nav__content-link-4k').href = imagePath + slideIndex + '_2160.jpg';
+		}
 
-			// disable scrolling
-			window.addEventListener( 'scroll', noscroll );
+		// Change slide according to which item user has clicked on
+		$('.item').on('click', function() {
+			var itemIndex = $(this).data('index');
+			console.log(itemIndex);
+			toggleContent();
+			showSlides(slideIndex = itemIndex);
+		});
 
-			trigger.addEventListener( 'click', toggleContent );
+		// })();
 
-		})();
-
-
-		// $(document).ready( function() {
-		// 	var index = 0;
-		// 	var nextIndex = 1;
-
-		// 	// Next stuff
-		// 	var images = [
-		// 		'item01',
-		// 		'item02',
-		// 		'item03',
-		// 		'item04',
-		// 		'item05',
-		// 		'item06',
-		// 		'item07',
-		// 		'item08',
-		// 		'item09'
-		// 	]
-			
-		// 	$('.nav__prev').click(function(event) {
-		// 		event.preventDefault();
-
-		// 		if (index == 0) {
-		// 			index = 8; // need to make dynamic later
-		// 		}
-		// 		index--;
-		// 		$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
-		// 		$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
-		// 		$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-		// 		$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-
-		// 		if (index == 0) {
-		// 			index = 8;
-		// 		}
-		// 		$('.nav__prev div').css('background-image', 'url(assets/images/gallery/' + images[index-1] + '-thumb.jpg)')
-		// 	});
-
-		// 	$('.nav__next').click(function(event) {
-		// 		event.preventDefault();
-
-		// 		if (index == 8) {
-		// 			index = 0; // need to make dynamic later
-		// 		}
-		// 		index++;
-		// 		$('.intro__image-wrap').fadeOut(300, function() {
-		// 			$('.intro__image').attr('src', 'assets/images/gallery/' + images[index] + '.jpg');
-		// 			$('.nav__content-link1').attr('href', 'assets/images/gallery/' + images[index] + '-thumb.jpg');
-		// 			$('.nav__content-link2').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-		// 			$('.nav__content-link3').attr('href', 'assets/images/gallery/' + images[index] + '.jpg');
-					
-		// 		}).delay(100).fadeIn(300);
-				
-				
-
-		// 		if (nextIndex == 8) {
-		// 			nextIndex = -1;
-		// 		}
-
-		// 		nextIndex++;
-
-		// 		$('.nav__next div').css('background-image', 'url(assets/images/gallery/' + images[nextIndex] + '-thumb.jpg)');
-				
-		// 	});
-		// });
 	</script>
 </body>
 </html>
