@@ -6,7 +6,19 @@ var recentProjects = [
 		date: 'November 2017'
 	},
 	{
-		icon: 'icon_karaoke.png',
+		icon: 'icon_mic.png',
+		name: 'Don\'t Mind Me Ep.3',
+		description: 'David Black is in the studio! He is a professor at the University of Southern California studying mindfulness.',
+		date: 'June 15, 2017'
+	},
+	{
+		icon: 'icon_mic.png',
+		name: 'Don\'t Mind Me Ep.3',
+		description: 'David Black is in the studio! He is a professor at the University of Southern California studying mindfulness.',
+		date: 'June 15, 2017'
+	},
+	{
+		icon: 'icon_mic.png',
 		name: 'Don\'t Mind Me Ep.3',
 		description: 'David Black is in the studio! He is a professor at the University of Southern California studying mindfulness.',
 		date: 'June 15, 2017'

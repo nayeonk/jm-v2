@@ -74,6 +74,15 @@
       @media (min-width: 1024px) {
         .gallery .intro__image.rightmost {
           right: 0; } }
+    .gallery .intro__image.zoomout {
+      height: 40%; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.zoomout {
+          height: 80%; } }
+      @media (min-width: 768px) {
+        .gallery .intro__image.zoomout {
+          height: auto;
+          height: 60%; } }
   .gallery__container--open .intro__image {
     opacity: 0;
     -moz-transform: translate3d(0, 20%, 0);
@@ -193,7 +202,7 @@
     transform: translate3d(0, 20px, 0); }
   .gallery .bar {
     height: 70px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 100px;
     width: 90%;

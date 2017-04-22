@@ -84,6 +84,16 @@
 				right: 0;
 			}
 		}
+		&.zoomout {
+			height: 40%;
+			@media (min-width: $breakpoint-sm) {
+				height: 80%;
+			}
+			@media (min-width: $breakpoint-sm) {
+				height: auto;
+				height: 60%;
+			}	
+		}
 	}
 	&__container--open .intro__image {
 		opacity: 0;
@@ -228,7 +238,7 @@
 	}
 	.bar {
 		height: 70px;
-		background-color: rgba(0,0,0,0.4);
+		background-color: rgba(0,0,0,0.5);
 		position: absolute;
 		bottom: 100px;
 		width: 90%;
