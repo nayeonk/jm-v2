@@ -38,10 +38,39 @@ html,body {
 		display: block;
 	}
 }
+.no-mobile-inline {
+	display: none;
+	@media (min-width: $breakpoint-sm) {
+		display: inline;
+	}
+}
 .no-tablet {
 	display: block;
 	@media (min-width: $breakpoint-sm) {
 		display: none;
+	}
+}
+.mobile-only {
+	@media (min-width: $breakpoint-sm) {
+		display: none;
+	}
+}
+.tablet-only {
+	display: none;
+	@media (min-width: $breakpoint-sm) {
+		display: block;
+	}
+	@media (min-width: $breakpoint-md) {
+		display: none;
+	}
+}
+.desktop-only {
+	display: none;
+	@media (min-width: $breakpoint-sm) {
+		display: none;
+	}
+	@media (min-width: $breakpoint-md) {
+		display: block;
 	}
 }
 

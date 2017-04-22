@@ -32,15 +32,15 @@
 
 		<header class="intro">
 			<div class="intro__image-wrap">
-				<img class="intro__image slide fade" src="assets/images/gallery/1_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/2_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/3_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/4_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/5_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/6_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/7_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/8_1080.jpg" />
-				<img class="intro__image slide fade" src="assets/images/gallery/9_1080.jpg" />
+				<img class="intro__image slide fade center" src="assets/images/gallery/1_1080.jpg" />
+				<img class="intro__image slide fade leftish" src="assets/images/gallery/2_1080.jpg" />
+				<img class="intro__image slide fade rightish" src="assets/images/gallery/3_1080.jpg" />
+				<img class="intro__image slide fade center" src="assets/images/gallery/4_1080.jpg" />
+				<img class="intro__image slide fade rightish" src="assets/images/gallery/5_1080.jpg" />
+				<img class="intro__image slide fade center" src="assets/images/gallery/6_1080.jpg" />
+				<img class="intro__image slide fade leftish" src="assets/images/gallery/7_1080.jpg" />
+				<img class="intro__image slide fade center" src="assets/images/gallery/8_1080.jpg" />
+				<img class="intro__image slide fade center" src="assets/images/gallery/9_1080.jpg" />
 			</div>
 
 			<div class="bar">
@@ -61,9 +61,9 @@
 					<div class="nav__content-current">
 						<span>Currently Viewing</span>
 						<a class="nav__content-link-mobile" href="assets/images/gallery/1_1920.jpg" target="_blank">Mobile</a>
-						<a class="nav__content-link-tablet" href="assets/images/gallery/1_2048.jpg" target="_blank">Tablet</a>
-						<a class="nav__content-link-hd" href="assets/images/gallery/1_1080.jpg" target="_blank">HD</a>
-						<a class="nav__content-link-4k" href="assets/images/gallery/1_2160.jpg" target="_blank">4K</a>
+						<a class="nav__content-link-tablet no-mobile-inline" href="assets/images/gallery/1_2048.jpg" target="_blank">Tablet</a>
+						<a class="nav__content-link-hd no-mobile-inline" href="assets/images/gallery/1_1080.jpg" target="_blank">HD</a>
+						<a class="nav__content-link-4k no-mobile-inline" href="assets/images/gallery/1_2160.jpg" target="_blank">4K</a>
 					</div>
 					<div class="nav__content-next">
 						<span>Next Image</span>
@@ -140,7 +140,8 @@
 				<!-- <h2 class="item__title">Dynamic</h2> -->
 			</a>
 
-		</section><!-- /items-wrap -->
+		</section>
+
 	</div>
 
 	<script src="assets/vendor/js/jquery-3.2.1.min.js"></script>
@@ -232,7 +233,6 @@
 		// Change slide according to which item user has clicked on
 		$('.item').on('click', function() {
 			var itemIndex = $(this).data('index');
-			console.log(itemIndex);
 			toggleContent();
 			showSlides(slideIndex = itemIndex);
 		});

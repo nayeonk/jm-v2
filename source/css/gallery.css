@@ -34,6 +34,46 @@
     -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+    .gallery .intro__image.leftmost {
+      left: 0; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.leftmost {
+          left: 0; } }
+      @media (min-width: 1024px) {
+        .gallery .intro__image.leftmost {
+          left: 0; } }
+    .gallery .intro__image.leftish {
+      left: -80%; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.leftish {
+          left: -20%; } }
+      @media (min-width: 1024px) {
+        .gallery .intro__image.leftish {
+          left: -10%; } }
+    .gallery .intro__image.center {
+      left: -200%; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.center {
+          left: -80%; } }
+      @media (min-width: 1024px) {
+        .gallery .intro__image.center {
+          left: -20%; } }
+    .gallery .intro__image.rightish {
+      right: -120%; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.rightish {
+          right: -20%; } }
+      @media (min-width: 1024px) {
+        .gallery .intro__image.rightish {
+          right: -15%; } }
+    .gallery .intro__image.rightmost {
+      right: 0; }
+      @media (min-width: 768px) {
+        .gallery .intro__image.rightmost {
+          right: 0; } }
+      @media (min-width: 1024px) {
+        .gallery .intro__image.rightmost {
+          right: 0; } }
   .gallery__container--open .intro__image {
     opacity: 0;
     -moz-transform: translate3d(0, 20%, 0);
@@ -59,7 +99,6 @@
     margin: 0 54% 0 1em;
     line-height: 1.2; }
   .gallery .trigger {
-    position: relative;
     overflow: hidden;
     padding: 0;
     width: 40px;
@@ -67,11 +106,19 @@
     outline: none;
     border: none;
     background: none;
-    flex: none;
-    -webkit-flex: none;
     position: absolute;
-    bottom: 80px;
-    right: 120px; }
+    bottom: 30px;
+    left: 45%; }
+    @media (min-width: 768px) {
+      .gallery .trigger {
+        bottom: 40px;
+        right: 40px;
+        left: auto; } }
+    @media (min-width: 1024px) {
+      .gallery .trigger {
+        bottom: 80px;
+        right: 120px;
+        left: auto; } }
   .gallery .trigger span {
     position: absolute;
     top: 100%; }
@@ -160,11 +207,11 @@
   .gallery .nav__prev {
     left: 0px; }
     .gallery .nav__prev span {
-      background: #666 url(../assets/images/prev.png) no-repeat center center; }
+      background: #666 url(../assets/images/gallery/prev.png) no-repeat center center; }
   .gallery .nav__next {
     right: 0px; }
     .gallery .nav__next span {
-      background: #666 url(../assets/images/next.png) no-repeat center center; }
+      background: #666 url(../assets/images/gallery/next.png) no-repeat center center; }
   .gallery .nav > a {
     position: absolute;
     top: 0px;
@@ -229,7 +276,6 @@
     -webkit-border-radius: 45px;
     border-radius: 45px; }
   .gallery .nav__content {
-    display: none;
     position: absolute;
     top: 0px;
     left: 70px;
@@ -248,17 +294,29 @@
         color: #777;
         letter-spacing: 2px; }
     .gallery .nav__content-prev {
-      margin-left: 20px; }
+      margin-left: 20px;
+      display: none; }
+      @media (min-width: 1024px) {
+        .gallery .nav__content-prev {
+          display: block; } }
     .gallery .nav__content-current {
       text-align: center;
-      width: 380px !important; }
+      width: 100% !important;
+      font-size: 16px; }
+      @media (min-width: 1024px) {
+        .gallery .nav__content-current {
+          width: 380px !important; } }
       .gallery .nav__content-current span {
         color: #d0ab47 !important; }
       .gallery .nav__content-current a {
         color: #aaa; }
     .gallery .nav__content-next {
       margin-right: 20px;
-      text-align: right; }
+      text-align: right;
+      display: none; }
+      @media (min-width: 1024px) {
+        .gallery .nav__content-next {
+          display: block; } }
 
 .fade {
   -webkit-animation-name: fade;

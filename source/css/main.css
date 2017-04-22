@@ -29,11 +29,39 @@ html, body {
     .no-mobile {
       display: block; } }
 
+.no-mobile-inline {
+  display: none; }
+  @media (min-width: 768px) {
+    .no-mobile-inline {
+      display: inline; } }
+
 .no-tablet {
   display: block; }
   @media (min-width: 768px) {
     .no-tablet {
       display: none; } }
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none; } }
+
+.tablet-only {
+  display: none; }
+  @media (min-width: 768px) {
+    .tablet-only {
+      display: block; } }
+  @media (min-width: 1024px) {
+    .tablet-only {
+      display: none; } }
+
+.desktop-only {
+  display: none; }
+  @media (min-width: 768px) {
+    .desktop-only {
+      display: none; } }
+  @media (min-width: 1024px) {
+    .desktop-only {
+      display: block; } }
 
 /* Menu styles - note: might move to separate file */
 .menu {

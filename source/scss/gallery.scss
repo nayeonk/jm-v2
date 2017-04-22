@@ -39,6 +39,51 @@
 		-moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 		-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 		transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+		&.leftmost {
+			left: 0;
+			@media (min-width: $breakpoint-sm) {
+				left: 0;
+			}
+			@media (min-width: $breakpoint-md) {
+				left: 0;
+			}
+		}
+		&.leftish {
+			left: -80%;
+			@media (min-width: $breakpoint-sm) {
+				left: -20%;
+			}
+			@media (min-width: $breakpoint-md) {
+				left: -10%;
+			}
+		}
+		&.center {
+			left: -200%;
+			@media (min-width: $breakpoint-sm) {
+				left: -80%;
+			}
+			@media (min-width: $breakpoint-md) {
+				left: -20%;
+			}
+		}
+		&.rightish {
+			right: -120%;
+			@media (min-width: $breakpoint-sm) {
+				right: -20%;
+			}
+			@media (min-width: $breakpoint-md) {
+				right: -15%;
+			}
+		}
+		&.rightmost {
+			right: 0;
+			@media (min-width: $breakpoint-sm) {
+				right: 0;
+			}
+			@media (min-width: $breakpoint-md) {
+				right: 0;
+			}
+		}
 	}
 	&__container--open .intro__image {
 		opacity: 0;
@@ -70,7 +115,6 @@
 		line-height: 1.2;
 	}
 	.trigger {
-		position: relative;
 		overflow: hidden;
 		padding: 0;
 		width: 40px;
@@ -78,11 +122,19 @@
 		outline: none;
 		border: none;
 		background: none;
-		flex: none;
-		-webkit-flex: none;
 		position: absolute;
-		bottom: 80px;
-		right: 120px;
+		bottom: 30px;
+		left: 45%;
+		@media (min-width: $breakpoint-sm) {
+			bottom: 40px;
+			right: 40px;
+			left: auto;
+		}
+		@media (min-width: $breakpoint-md) {
+			bottom: 80px;
+			right: 120px;
+			left: auto;
+		}
 	}
 	.trigger span {
 		position: absolute;
@@ -192,13 +244,13 @@
 		&__prev {
 			left: 0px;
 			span {
-    			background: #666 url(../assets/images/prev.png) no-repeat center center;
+    			background: #666 url(../assets/images/gallery/prev.png) no-repeat center center;
 			}
 		}
 		&__next {
 			right: 0px;
 			span {
-    			background: #666 url(../assets/images/next.png) no-repeat center center;
+    			background: #666 url(../assets/images/gallery/next.png) no-repeat center center;
 			}
 		}
 		> a {
@@ -270,7 +322,7 @@
 		    border-radius: 45px; 
 		}
 		&__content {
-			display: none;
+			// display: none;
 			position: absolute;
 			top: 0px;
 			left: 70px;
@@ -292,20 +344,33 @@
 			}
 			&-prev {
 				margin-left: 20px;
+				display: none;
+				@media (min-width: $breakpoint-md) {
+					display: block;
+				}
 			}
 			&-current {
 				text-align: center;
-				width: 380px !important;
+				width: 100% !important;
+				font-size: 16px;
+				@media (min-width: $breakpoint-md) {
+					width: 380px !important;
+				}
 				span {
 					color: #d0ab47 !important;
 				}
 				a {
 					color: #aaa;
 				}
+
 			}
 			&-next {
 				margin-right: 20px;
 				text-align: right;
+				display: none;
+				@media (min-width: $breakpoint-md) {
+					display: block;
+				}
 			}
 		}
 	}
