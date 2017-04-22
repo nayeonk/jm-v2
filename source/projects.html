@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jennette McCurdy | Projects</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700|Ubuntu:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/projects.css">
+
+	<script src="assets/vendor/js/modernizr-custom.js"></script>
+	<script src="assets/vendor/js/classie.js"></script>
+</head>
+<body class="projects">
+	<div class="main__container projects__container">
+		<div class="menu">
+			<button class="menu__button" id="menu__button"><br/>+</button>
+			<div class="menu__wrapper" id="menu__wrapper">
+			   <ul>
+			       <li><a href="/"><span>Home</span></a></li>
+			       <li><a href="fun.html"><span>Fun</span></a></li>
+			       <li><a href="projects.html"><span>Projects</span></a></li>
+			       <li><a href="connect.html"><span>Connect</span></a></li>
+			       <li><a href="photos.html"><span>Photos</span></a></li>
+			       <li><a href="videos.html"><span>Videos</span></a></li>
+			   </ul>
+			</div>
+		</div>
+
+		<div class="recent" id="recent">
+			<div class="recent__item">
+				<img src="assets/images/projects/icon_slate_film.png"/>
+				<h2>Little Bitches</h2>
+				<p>A group of friends vow to open their college acceptance letters at the same time during the big end-of-year party.</p>
+				<strong>November 2017</strong>
+			</div>
+		</div>
+	</div>
+	<script src="js/menu.js"></script>
+	<script src="js/projects.js"></script>
+	<script>
+		var item = '';
+		var imagePath = 'assets/images/projects/';
+		
+		for(var i = 0; i < recentProjects.length; i++) {
+			item += '<div class="recent__item">';
+			item += '<img src="' + imagePath + recentProjects[i].icon +'"/>';
+			item += '<h2>' + recentProjects[i].name + '</h2>';
+			item += '<p>' + recentProjects[i].description + '</p>';
+			item += '<strong>' + recentProjects[i].date + '</strong>';
+			item += '</div>';
+		}
+		document.getElementById('recent').innerHTML = item;
+	</script>
+</body>
+</html>

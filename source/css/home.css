@@ -1,6 +1,7 @@
 /* ----- VARIABLES---- */
 .home {
-  height: 100%; }
+  height: 100%;
+  background: #d0d0d0; }
   .home__container {
     height: 100%;
     background-image: url("../assets/images/home/main_bg1700.jpg");
