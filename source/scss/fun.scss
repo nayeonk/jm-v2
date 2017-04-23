@@ -1,12 +1,60 @@
 @import 'variables';
 @import 'mixins';
 
-@keyframes orbit {
+$circleCoordinates1 : 0px,-105px;
+$circleCoordinates2 : 99.86px, -32.45px;
+$circleCoordinates3: 61.72px, 84.95px;
+$circleCoordinates4 : -61.72px, 84.95px;
+$circleCoordinates5 : -99.86px, -32.45px;
+
+@keyframes orbit1 {
 	from {
-		transform: rotate(0deg) translate(0px,-105px) rotate(0deg);
+		transform: rotate(0deg) translate($circleCoordinates1) scale(0.5) rotate(0deg);
+		opacity: 0;
 	}
 	to {
-		transform: rotate(360deg) translate(0px,-105px) rotate(-360deg);
+		transform: rotate(360deg) translate($circleCoordinates1) scale(1) rotate(-360deg);
+		opacity: 1;
+	}
+}
+@keyframes orbit2 {
+	from {
+		transform: rotate(0deg) translate($circleCoordinates2) scale(0.5) rotate(0deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(360deg) translate($circleCoordinates2) scale(1) rotate(-360deg);
+		opacity: 1;
+	}
+}
+@keyframes orbit3 {
+	from {
+		transform: rotate(0deg) translate($circleCoordinates3)  scale(0.5) rotate(0deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(360deg) translate($circleCoordinates3) scale(1) rotate(-360deg);
+		opacity: 1;
+	}
+}
+@keyframes orbit4 {
+	from {
+		transform: rotate(0deg) translate($circleCoordinates4) scale(0.5) rotate(0deg);
+		opacity: 0;
+	}
+	to {
+		transform: rotate(360deg) translate($circleCoordinates4) scale(1) rotate(-360deg);
+		opacity: 1;
+	}
+}
+@keyframes orbit5 {
+	from {
+		transform: rotate(0deg) translate($circleCoordinates5) scale(0.5) rotate(0deg);
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		transform: rotate(360deg) translate($circleCoordinates5) scale(1) rotate(-360deg);
 	}
 }
 .fun {
@@ -14,17 +62,32 @@
 	background-image: url('../assets/images/fun/main_bg_fun_1700.jpg');
 	background-size: cover;
 	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 	width: 100%;
-
+	@media (min-width: $breakpoint-md) {
+		background-attachment: fixed;
+	}
 	&__container {
 		position: relative;
 		width: 100%;
 	}
 	.pagenav {
 		position: absolute;
-		right: 36%;
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100px;
 		top: 200px;
-		background-color: yellow;
+		@media (min-width: $breakpoint-sm) {
+			right: 30%;
+			left: auto;
+		}
+		@media (min-width: $breakpoint-md) {
+			right: 34%;
+			left: auto;
+		}
 		&__item {
 			display: block;
 			box-sizing: border-box;
@@ -32,7 +95,7 @@
 			height: 100px;
 			padding-left: 15px;
 			padding-right: 15px;
-			padding-top: 24px;
+			padding-top: 1.25em;
 			background-color: #636363;
 			color: white;
 			text-decoration: none;
@@ -42,27 +105,81 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			// transform: translate(0px, -150px);
-			// animation: orbit 3s infinite linear;
+			outline: 0;
 		}
+		$animationLength : 0.8s;
+		$animationDelay : 0.5s;
+		$animationFunction : ease-in-out;
+		$animationFillMode : forwards;
+		$scale: 0.5;
 		&__item:nth-child(1) {
-			transform: translate(0px, -105px);
-			// animation: orbit 2s infinite linear;
+			-moz-transform: translate($circleCoordinates1) scale($scale);
+			-webkit-transform: translate($circleCoordinates1) scale($scale);
+			transform: translate($circleCoordinates1) scale($scale);
+			opacity: 0;
+			animation: orbit1 $animationLength $animationDelay $animationFunction $animationFillMode;
 		}
 		&__item:nth-child(2) {
-			transform: translate(74px, -74px);
-			transform: translate(90.93px, -52.5px);
-			transform: translate(103.4px, -18.23px);
-			transform: translate(99.86px, -32.45px);
+			-moz-transform: translate($circleCoordinates2) scale($scale);
+			-webkit-transform: translate($circleCoordinates2) scale($scale);
+			transform: translate($circleCoordinates2) scale($scale);
+			opacity: 0;
+			animation: orbit2 $animationLength $animationDelay $animationFunction $animationFillMode;
+			padding-top: 2.4em;
 		}
 		&__item:nth-child(3) {
-			transform: translate(61.72px, 84.95px);
+			-moz-transform: translate($circleCoordinates3) scale($scale);
+			-webkit-transform: translate($circleCoordinates3) scale($scale);
+			transform: translate($circleCoordinates3) scale($scale);
+			opacity: 0;
+			animation: orbit3 $animationLength $animationDelay $animationFunction $animationFillMode;
+			padding-top: 1.9em;
 		}
 		&__item:nth-child(4) {
-			transform: translate(-61.72px, 84.95px);
+			-moz-transform: translate($circleCoordinates4) scale($scale);
+			-webkit-transform: translate($circleCoordinates4) scale($scale);
+			transform: translate($circleCoordinates4) scale($scale);
+			opacity: 0;
+			animation: orbit4 $animationLength $animationDelay $animationFunction $animationFillMode;
+			padding-top: 1.9em;
 		}
 		&__item:nth-child(5) {
-			transform: translate(-99.86px, -32.45px);
+			-moz-transform: translate($circleCoordinates5) scale($scale);
+			-webkit-transform: translate($circleCoordinates5) scale($scale);
+			transform: translate($circleCoordinates5) scale($scale);
+			opacity: 0;
+			animation: orbit5 $animationLength $animationDelay $animationFunction $animationFillMode;
+			padding-top: 2.4em;
+		}
+	}
+	.content {
+		box-sizing: border-box;
+		background-color: rgba(0,0,0,0.4);
+		color: white;
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+		top: 220px;
+		padding: 20px 10px;
+		transform: translate(-100px, 0);
+		@media (min-width: $breakpoint-sm) {
+			right: auto;
+			left: 0;
+			width: 400px;
+			padding: 20px 20px;
+			transform: translate(-100px, 0);
+		}
+		@media (min-width: $breakpoint-md) {
+			width: 600px;
+			top: 250px;
+			padding: 20px 20px 120px 20px;
+			transform: translate(-225px, 0);
+		}
+		h2 {
+			margin-top: 0;
 		}
 	}
 }

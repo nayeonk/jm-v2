@@ -32,15 +32,58 @@
 		</div>
 
 		<div class="pagenav">
-			<a href="#" class="pagenav__item">Don't Mind Me Podcast</a>
-			<a href="#" class="pagenav__item">FB Live!</a>
-			<a href="#" class="pagenav__item">Instagram POP</a>
-			<a href="#" class="pagenav__item">Where's Jennette?</a>
-			<a href="#" class="pagenav__item">eZine</a>
+			<a href="#" class="pagenav__item" id="podcastButton">Don't Mind Me Podcast</a>
+			<a href="#" class="pagenav__item" id="fbLiveButton">FB Live!</a>
+			<a href="#" class="pagenav__item" id="instagramButton">Instagram POP</a>
+			<a href="#" class="pagenav__item" id="whereButton">Where's Jennette?</a>
+			<a href="#" class="pagenav__item" id="ezineButton">eZine</a>
+
+			<div class="content">
+				<div class="content__item">
+					<h2 id="podcast">Don't Mind Me Podcast</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+				</div>
+				<div class="content__item">
+					<h2 id="fbLive">FB Live!</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+				</div>
+				<div class="content__item">
+					<h2 id="instagram">Instagram POP</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+				</div>
+				<div class="content__item">
+					<h2 id="where">Where's Jennette?</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+				</div>
+				<div class="content__item">
+					<h2 id="ezine">eZine</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+				</div>
+			</div>
+
 		</div>
 		
 	</div>
 
+	<script src="assets/vendor/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/vendor/js/animatescroll.min.js"></script>
 	<script src="js/menu.js"></script>
+	<script>
+		$('#podcastButton').on('click', function() {
+			$('#podcast').animatescroll({scrollSpeed: 1000, padding: 20});
+		});
+		$('#fbLiveButton').on('click', function() {
+			$('#fbLive').animatescroll({scrollSpeed: 1000, padding: 20});
+		});
+		$('#instagramButton').on('click', function() {
+			$('#instagram').animatescroll({scrollSpeed: 1000, padding: 20});
+		});
+		$('#whereButton').on('click', function() {
+			$('#where').animatescroll({scrollSpeed: 1000, padding: 20});
+		});
+		$('#ezineButton').on('click', function() {
+			$('#ezine').animatescroll({scrollSpeed: 1000, padding: 20});
+		});
+	</script>
 </body>
 </html>
