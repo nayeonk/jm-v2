@@ -1,1 +1,51 @@
 /* ----- VARIABLES---- */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(0px, -105px) rotate(0deg); }
+  to {
+    transform: rotate(360deg) translate(0px, -105px) rotate(-360deg); } }
+
+.fun {
+  background-color: #d0d0d0;
+  background-image: url("../assets/images/fun/main_bg_fun_1700.jpg");
+  background-size: cover;
+  background-position: center top;
+  width: 100%; }
+  .fun__container {
+    position: relative;
+    width: 100%; }
+  .fun .pagenav {
+    position: absolute;
+    right: 36%;
+    top: 200px;
+    background-color: yellow; }
+    .fun .pagenav__item {
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 24px;
+      background-color: #636363;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 700;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .fun .pagenav__item:nth-child(1) {
+      transform: translate(0px, -105px); }
+    .fun .pagenav__item:nth-child(2) {
+      transform: translate(74px, -74px);
+      transform: translate(90.93px, -52.5px);
+      transform: translate(103.4px, -18.23px);
+      transform: translate(99.86px, -32.45px); }
+    .fun .pagenav__item:nth-child(3) {
+      transform: translate(61.72px, 84.95px); }
+    .fun .pagenav__item:nth-child(4) {
+      transform: translate(-61.72px, 84.95px); }
+    .fun .pagenav__item:nth-child(5) {
+      transform: translate(-99.86px, -32.45px); }
