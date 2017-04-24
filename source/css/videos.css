@@ -93,7 +93,6 @@
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    border: 20px solid #fff;
     position: relative;
     overflow: hidden;
     display: -webkit-flex;

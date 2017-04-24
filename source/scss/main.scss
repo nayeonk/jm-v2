@@ -76,6 +76,9 @@ html,body {
 /* Menu styles - note: might move to separate file */
 .menu {
 	position: relative;
+	position: absolute;
+	top: 0;
+	width: 100%;
 	// height: 100px;
 	ul, li {
 		margin: 0;

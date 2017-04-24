@@ -64,7 +64,10 @@ html, body {
 
 /* Menu styles - note: might move to separate file */
 .menu {
-  position: relative; }
+  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%; }
   .menu ul, .menu li {
     margin: 0;
     padding: 0;
