@@ -60,11 +60,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 100px;
-    top: 200px; }
+    top: 200px;
+    z-index: 9; }
     @media (min-width: 768px) {
       .fun .pagenav {
         right: 30%;
-        left: auto; } }
+        left: auto;
+        position: fixed; } }
     @media (min-width: 1024px) {
       .fun .pagenav {
         right: 34%;
@@ -87,6 +89,9 @@
       top: 0;
       left: 0;
       outline: 0; }
+      @media (min-width: 1024px) {
+        .fun .pagenav__item {
+          font-size: 0.9em; } }
     .fun .pagenav__item:nth-child(1) {
       -moz-transform: translate(0px, -105px) scale(0.5);
       -webkit-transform: translate(0px, -105px) scale(0.5);
@@ -125,27 +130,28 @@
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    position: absolute;
-    right: 0;
-    left: 0;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
-    top: 220px;
-    padding: 20px 10px;
-    transform: translate(-100px, 0); }
-    @media (min-width: 768px) {
-      .fun .content {
-        right: auto;
-        left: 0;
-        width: 400px;
-        padding: 20px 20px;
-        transform: translate(-100px, 0); } }
-    @media (min-width: 1024px) {
-      .fun .content {
-        width: 600px;
-        top: 250px;
-        padding: 20px 20px 120px 20px;
-        transform: translate(-225px, 0); } }
+    position: relative;
+    top: 100vh;
+    margin-bottom: 200px; }
+    .fun .content__item {
+      padding: 30px 20px 40px 20px; }
+      @media (min-width: 1024px) {
+        .fun .content__item {
+          padding: 50px 60px 40px 60px; } }
+    .fun .content__item:nth-child(1) {
+      background-color: rgba(205, 119, 221, 0.4); }
+    .fun .content__item:nth-child(2) {
+      background-color: rgba(180, 180, 180, 0.4); }
+    .fun .content__item:nth-child(3) {
+      background-color: rgba(12, 138, 215, 0.4); }
+    .fun .content__item:nth-child(4) {
+      background-color: rgba(200, 80, 80, 0.4); }
+    .fun .content__item:nth-child(5) {
+      background-color: rgba(234, 109, 71, 0.4); }
+    .fun .content p {
+      margin: 0; }
     .fun .content h2 {
       margin-top: 0; }
