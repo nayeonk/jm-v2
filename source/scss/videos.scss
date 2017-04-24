@@ -203,6 +203,10 @@
 	}
 	.content {
 		position: relative;
+		@media (min-width: $breakpoint-sm) {
+			// TODO: fix this later - dont hack it
+			transform: translate(-310px,-70px);
+		}
 	}
 	.loader {
 		font-size: 2.5em;
@@ -279,17 +283,31 @@
 	}
 	.spread {
 		width: 100%;
-		margin: 9em 0 0em 0;
+		margin: 12em 0 0em 0;
 		text-align: center;
 		white-space: nowrap;
+		@media (min-width: $breakpoint-sm) {
+			margin: 9em 0 0em 0;
+			text-align: left;
+			// trying out transform to position things
+			-webkit-transform: translate(140px,0);
+			transform: translate(140px,0);
+		}
 		&__img {
-			width: 200px;
-			height: 200px;
-			margin: 0 -50px;
-			border: 10px solid #fff;
+			width: 150px;
+			height: 150px;
+			margin: 0 -20px;
+			border: 5px solid #fff;
 			outline: 1px solid transparent;
 			box-shadow: 0 0 10px rgba(0,0,0,0.3);
 			background: #aaa;
+
+			@media (min-width: $breakpoint-sm) {
+				width: 200px;
+				height: 200px;
+				margin: 0 -50px;
+				border: 10px solid #fff;
+			}
 			&--rotation {
 				&-1 {
 					-webkit-transform: rotate3d(0,0,1,-8deg);
