@@ -1,13 +1,12 @@
 /* ----- VARIABLES---- */
 .home {
   height: 100%;
-  background: #d0d0d0; }
-  .home__container {
-    height: 100%;
-    background-image: url("../assets/images/home/main_bg1700.jpg");
-    background-size: cover;
-    background-position: center top;
-    position: relative; }
+  background: #d0d0d0;
+  height: 100%;
+  background-image: url("../assets/images/home/main_bg1700.jpg");
+  background-size: cover;
+  background-position: center top;
+  position: relative; }
   .home__heading {
     font-weight: 700;
     position: absolute;

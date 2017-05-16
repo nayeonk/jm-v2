@@ -3,12 +3,13 @@
 .home {
 	height: 100%; // TODO: check on this
 	background: #d0d0d0;
+	height: 100%;
+	background-image: url('../assets/images/home/main_bg1700.jpg');
+	background-size: cover;
+	background-position: center top;
+	position: relative;
 	&__container {
-		height: 100%;
-		background-image: url('../assets/images/home/main_bg1700.jpg');
-		background-size: cover;
-		background-position: center top;
-		position: relative;
+		
 	}
 	&__heading {
 		font-weight: $bold;
