@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 
-.gallery {
+.photos {
 	background: #2a2e39;
 	color: #dbdbdb;
 	.intro {
@@ -293,13 +293,13 @@
 		&__prev {
 			left: 0px;
 			span {
-    			background: #666 url(../assets/images/gallery/prev.png) no-repeat center center;
+    			background: #666 url(../assets/images/photos/prev.png) no-repeat center center;
 			}
 		}
 		&__next {
 			right: 0px;
 			span {
-    			background: #666 url(../assets/images/gallery/next.png) no-repeat center center;
+    			background: #666 url(../assets/images/photos/next.png) no-repeat center center;
 			}
 		}
 		> a {
