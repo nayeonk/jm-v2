@@ -50,9 +50,6 @@
   @media (min-width: 1024px) {
     .fun {
       background-attachment: fixed; } }
-  .fun__container {
-    position: relative;
-    width: 100%; }
   .fun .pagenav {
     position: absolute;
     right: 0;
