@@ -103,6 +103,21 @@ a:hover {
 	}
 }
 
+/* Footer styles */
+footer {
+	text-align: center;
+	font-size: 10px;
+	width: 100%;
+	padding-bottom: 10px;
+	@media (min-width: $breakpoint-lg) {
+		font-size: 12px;
+	}
+}
+footer.fixed {
+	position: absolute;
+	bottom: 0;
+}
+
 /* Menu styles - note: might move to separate file */
 .menu {
 	position: relative;

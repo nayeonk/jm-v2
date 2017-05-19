@@ -19,6 +19,7 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     padding: 30px 20px 20px 20px;
     color: #fbfbfb;
     background-color: rgba(0, 0, 0, 0.6);
@@ -35,6 +36,9 @@
         padding: 60px 30px 20px 40px;
         margin-left: 140px;
         margin-right: 0; } }
+    @media (min-width: 1024px) {
+      .projects .recent {
+        margin-bottom: 80px; } }
     .projects .recent__item {
       position: relative;
       padding-left: 65px;
