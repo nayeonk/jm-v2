@@ -30,17 +30,22 @@
 			   </ul>
 			</div>
 		</div>
-
-		<div class="recent" id="recent">
-			<div class="recent__item">
-				<img src="assets/images/projects/icon_slate_film.png"/>
-				<h2>Little Bitches</h2>
-				<p>A group of friends vow to open their college acceptance letters at the same time during the big end-of-year party.</p>
-				<strong>November 2017</strong>
+		<div class="projects__bg"></div>
+		<div class="posts">
+			<div class="posts__container" id="recent">
+				<!-- Template for each post
+				<div class="posts__item">
+					<img src="assets/images/projects/icon_slate_film.png"/>
+					<h2>Little Bitches</h2>
+					<p>A group of friends vow to open their college acceptance letters at the same time during the big end-of-year party.</p>
+					<strong>November 2017</strong>
+				</div> -->
 			</div>
 		</div>
+
+		<footer>Copyright 2017 &copy; jennettemccurdy.com</footer>
 	</div>
-	<footer class="fixed">Copyright 2017 &copy; jennettemccurdy.com</footer>
+	
 
 	<script src="js/menu.js"></script>
 	<script src="js/projects.js"></script>
@@ -49,7 +54,7 @@
 		var imagePath = 'assets/images/projects/';
 		
 		for(var i = 0; i < recentProjects.length; i++) {
-			item += '<div class="recent__item">';
+			item += '<div class="posts__item">';
 			item += '<img src="' + imagePath + recentProjects[i].icon +'"/>';
 			item += '<h2>' + recentProjects[i].name + '</h2>';
 			item += '<p>' + recentProjects[i].description + '</p>';
