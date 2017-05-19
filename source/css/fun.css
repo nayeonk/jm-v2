@@ -9,35 +9,35 @@
 
 @keyframes orbit2 {
   from {
-    transform: rotate(0deg) translate(99.86px, -32.45px) scale(0.5) rotate(0deg);
+    transform: rotate(0deg) translate(105px, 0px) scale(0.5) rotate(0deg);
     opacity: 0; }
   to {
-    transform: rotate(360deg) translate(99.86px, -32.45px) scale(1) rotate(-360deg);
+    transform: rotate(360deg) translate(105px, 0px) scale(1) rotate(-360deg);
     opacity: 1; } }
 
 @keyframes orbit3 {
   from {
-    transform: rotate(0deg) translate(61.72px, 84.95px) scale(0.5) rotate(0deg);
+    transform: rotate(0deg) translate(0px, 105px) scale(0.5) rotate(0deg);
     opacity: 0; }
   to {
-    transform: rotate(360deg) translate(61.72px, 84.95px) scale(1) rotate(-360deg);
+    transform: rotate(360deg) translate(0px, 105px) scale(1) rotate(-360deg);
     opacity: 1; } }
 
 @keyframes orbit4 {
   from {
-    transform: rotate(0deg) translate(-61.72px, 84.95px) scale(0.5) rotate(0deg);
+    transform: rotate(0deg) translate(-105px, 0px) scale(0.5) rotate(0deg);
     opacity: 0; }
   to {
-    transform: rotate(360deg) translate(-61.72px, 84.95px) scale(1) rotate(-360deg);
+    transform: rotate(360deg) translate(-105px, 0px) scale(1) rotate(-360deg);
     opacity: 1; } }
 
 @keyframes orbit5 {
   from {
-    transform: rotate(0deg) translate(-99.86px, -32.45px) scale(0.5) rotate(0deg);
+    transform: rotate(0deg) translate(-74.25px, 74.25px) scale(0.5) rotate(0deg);
     opacity: 0; }
   to {
     opacity: 1;
-    transform: rotate(360deg) translate(-99.86px, -32.45px) scale(1) rotate(-360deg); } }
+    transform: rotate(360deg) translate(-74.25px, 74.25px) scale(1) rotate(-360deg); } }
 
 .fun {
   background-color: #d0d0d0;
@@ -94,32 +94,35 @@
       -webkit-transform: translate(0px, -105px) scale(0.5);
       transform: translate(0px, -105px) scale(0.5);
       opacity: 0;
-      animation: orbit1 0.8s 0.5s ease-in-out forwards; }
+      animation: orbit1 0.8s 0.5s ease-in-out forwards;
+      padding-top: 2.4em; }
     .fun .pagenav__item:nth-child(2) {
-      -moz-transform: translate(99.86px, -32.45px) scale(0.5);
-      -webkit-transform: translate(99.86px, -32.45px) scale(0.5);
-      transform: translate(99.86px, -32.45px) scale(0.5);
+      -moz-transform: translate(105px, 0px) scale(0.5);
+      -webkit-transform: translate(105px, 0px) scale(0.5);
+      transform: translate(105px, 0px) scale(0.5);
       opacity: 0;
       animation: orbit2 0.8s 0.5s ease-in-out forwards;
       padding-top: 2.4em; }
     .fun .pagenav__item:nth-child(3) {
-      -moz-transform: translate(61.72px, 84.95px) scale(0.5);
-      -webkit-transform: translate(61.72px, 84.95px) scale(0.5);
-      transform: translate(61.72px, 84.95px) scale(0.5);
+      -moz-transform: translate(0px, 105px) scale(0.5);
+      -webkit-transform: translate(0px, 105px) scale(0.5);
+      transform: translate(0px, 105px) scale(0.5);
       opacity: 0;
       animation: orbit3 0.8s 0.5s ease-in-out forwards;
-      padding-top: 1.9em; }
+      padding-top: 0;
+      line-height: 100px; }
     .fun .pagenav__item:nth-child(4) {
-      -moz-transform: translate(-61.72px, 84.95px) scale(0.5);
-      -webkit-transform: translate(-61.72px, 84.95px) scale(0.5);
-      transform: translate(-61.72px, 84.95px) scale(0.5);
+      -moz-transform: translate(-105px, 0px) scale(0.5);
+      -webkit-transform: translate(-105px, 0px) scale(0.5);
+      transform: translate(-105px, 0px) scale(0.5);
       opacity: 0;
       animation: orbit4 0.8s 0.5s ease-in-out forwards;
-      padding-top: 1.9em; }
+      padding-top: 0;
+      line-height: 100px; }
     .fun .pagenav__item:nth-child(5) {
-      -moz-transform: translate(-99.86px, -32.45px) scale(0.5);
-      -webkit-transform: translate(-99.86px, -32.45px) scale(0.5);
-      transform: translate(-99.86px, -32.45px) scale(0.5);
+      -moz-transform: translate(-74.25px, 74.25px) scale(0.5);
+      -webkit-transform: translate(-74.25px, 74.25px) scale(0.5);
+      transform: translate(-74.25px, 74.25px) scale(0.5);
       opacity: 0;
       animation: orbit5 0.8s 0.5s ease-in-out forwards;
       padding-top: 2.4em; }
@@ -143,7 +146,7 @@
     .fun .content__item:nth-child(2) {
       background-color: rgba(180, 180, 180, 0.4); }
     .fun .content__item:nth-child(3) {
-      background-color: rgba(12, 138, 215, 0.4); }
+      background-color: rgba(12, 12, 12, 0.4); }
     .fun .content__item:nth-child(4) {
       background-color: rgba(200, 80, 80, 0.4); }
     .fun .content__item:nth-child(5) {

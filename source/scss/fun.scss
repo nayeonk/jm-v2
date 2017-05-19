@@ -1,11 +1,11 @@
 @import 'variables';
 @import 'mixins';
 
-$circleCoordinates1 : 0px,-105px;
-$circleCoordinates2 : 99.86px, -32.45px;
-$circleCoordinates3: 61.72px, 84.95px;
-$circleCoordinates4 : -61.72px, 84.95px;
-$circleCoordinates5 : -99.86px, -32.45px;
+$circleCoordinates1 : 0px, -105px;
+$circleCoordinates2 : 105px, 0px;
+$circleCoordinates3 : 0px, 105px;
+$circleCoordinates4 : -105px, 0px;
+$circleCoordinates5 : -74.25px, 74.25px;
 
 @keyframes orbit1 {
 	from {
@@ -123,6 +123,7 @@ $circleCoordinates5 : -99.86px, -32.45px;
 			transform: translate($circleCoordinates1) scale($scale);
 			opacity: 0;
 			animation: orbit1 $animationLength $animationDelay $animationFunction $animationFillMode;
+			padding-top: 2.4em;
 		}
 		&__item:nth-child(2) {
 			-moz-transform: translate($circleCoordinates2) scale($scale);
@@ -138,7 +139,8 @@ $circleCoordinates5 : -99.86px, -32.45px;
 			transform: translate($circleCoordinates3) scale($scale);
 			opacity: 0;
 			animation: orbit3 $animationLength $animationDelay $animationFunction $animationFillMode;
-			padding-top: 1.9em;
+			padding-top: 0;
+			line-height: 100px;
 		}
 		&__item:nth-child(4) {
 			-moz-transform: translate($circleCoordinates4) scale($scale);
@@ -146,7 +148,8 @@ $circleCoordinates5 : -99.86px, -32.45px;
 			transform: translate($circleCoordinates4) scale($scale);
 			opacity: 0;
 			animation: orbit4 $animationLength $animationDelay $animationFunction $animationFillMode;
-			padding-top: 1.9em;
+			padding-top: 0;
+			line-height: 100px;
 		}
 		&__item:nth-child(5) {
 			-moz-transform: translate($circleCoordinates5) scale($scale);
@@ -185,7 +188,7 @@ $circleCoordinates5 : -99.86px, -32.45px;
 			background-color: rgba(180,180,180,0.4);
 		}
 		&__item:nth-child(3) {
-			background-color: rgba(12,138,215,0.4);
+			background-color: rgba(12,12,12,0.4);
 		}
 		&__item:nth-child(4) {
 			background-color: rgba(200,80,80,0.4);

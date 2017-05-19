@@ -2,10 +2,8 @@
 @import 'mixins';
 
 /* Global styles */
-* {
-	// -moz-box-sizing: border-box;
-	// box-sizing: border-box;
-}
+
+/** BASE **/
 html,body {
 	height: 100%;
 	font-size: 14px;
@@ -13,6 +11,38 @@ html,body {
 	@media (min-width: $breakpoint-sm) {
 		font-size: 16px;
 	}
+}
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 10px;
+	@media (min-width: $breakpoint-sm) {
+		margin-bottom: 20px;
+	}
+}
+p {
+	margin-bottom: 10px;
+	@media (min-width: $breakpoint-sm) {
+		margin-bottom: 20px;
+	}
+}
+h1 {
+
+}
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+a {
+  color: #a8872d;
+  text-decoration: none;
+}
+a:hover {
+  color: #a8872d;
+  text-decoration: underline;
 }
 .main {
 	&__container {
