@@ -47,7 +47,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   width: 100%; }
-  @media (min-width: 1024px) {
+  @media (min-width: 1366px) {
     .fun {
       background-attachment: fixed; } }
   .fun .pagenav {
@@ -62,12 +62,16 @@
     @media (min-width: 768px) {
       .fun .pagenav {
         right: 30%;
-        left: auto;
-        position: fixed; } }
+        left: auto; } }
     @media (min-width: 1024px) {
       .fun .pagenav {
         right: 34%;
-        left: auto; } }
+        left: auto;
+        position: fixed;
+        top: 180px; } }
+    @media (min-width: 1366px) {
+      .fun .pagenav {
+        top: 165px; } }
     .fun .pagenav__item {
       display: block;
       box-sizing: border-box;
@@ -95,14 +99,14 @@
       transform: translate(0px, -105px) scale(0.5);
       opacity: 0;
       animation: orbit1 0.8s 0.5s ease-in-out forwards;
-      padding-top: 2.4em; }
+      padding-top: 32px; }
     .fun .pagenav__item:nth-child(2) {
       -moz-transform: translate(105px, 0px) scale(0.5);
       -webkit-transform: translate(105px, 0px) scale(0.5);
       transform: translate(105px, 0px) scale(0.5);
       opacity: 0;
       animation: orbit2 0.8s 0.5s ease-in-out forwards;
-      padding-top: 2.4em; }
+      padding-top: 35px; }
     .fun .pagenav__item:nth-child(3) {
       -moz-transform: translate(0px, 105px) scale(0.5);
       -webkit-transform: translate(0px, 105px) scale(0.5);
@@ -134,24 +138,139 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 100vh;
-    margin-bottom: 200px; }
+    top: 100vh; }
     .fun .content__item {
-      padding: 30px 20px 40px 20px; }
-      @media (min-width: 1024px) {
-        .fun .content__item {
-          padding: 50px 60px 40px 60px; } }
-    .fun .content__item:nth-child(1) {
-      background-color: rgba(205, 119, 221, 0.4); }
-    .fun .content__item:nth-child(2) {
-      background-color: rgba(180, 180, 180, 0.4); }
-    .fun .content__item:nth-child(3) {
-      background-color: rgba(12, 12, 12, 0.4); }
-    .fun .content__item:nth-child(4) {
-      background-color: rgba(200, 80, 80, 0.4); }
-    .fun .content__item:nth-child(5) {
-      background-color: rgba(234, 109, 71, 0.4); }
-    .fun .content p {
-      margin: 0; }
-    .fun .content h2 {
-      margin-top: 0; }
+      height: 100vh;
+      overflow: hidden;
+      width: 100%; }
+      .fun .content__item h2 {
+        padding-top: 0;
+        font-size: 34px; }
+        @media (min-width: 768px) {
+          .fun .content__item h2 {
+            font-size: 44px; } }
+        @media (min-width: 1366px) {
+          .fun .content__item h2 {
+            font-size: 54px;
+            margin-bottom: 10px; } }
+      .fun .content__item p {
+        line-height: 2.0;
+        font-size: 15px;
+        margin-bottom: 0; }
+        @media (min-width: 768px) {
+          .fun .content__item p {
+            font-size: 18px; } }
+      .fun .content__item-inner {
+        width: 88%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 70px; }
+        @media (min-width: 768px) {
+          .fun .content__item-inner {
+            padding-top: 40vh; } }
+        @media (min-width: 1024px) {
+          .fun .content__item-inner {
+            padding-top: 42vh; } }
+        @media (min-width: 1366px) {
+          .fun .content__item-inner {
+            width: 600px;
+            box-sizing: border-box;
+            padding-top: 48vh;
+            position: absolute;
+            right: 5%; } }
+      .fun .content__item.goingMental {
+        background-color: #a9afad;
+        background-size: cover;
+        background-repeat: no-repeat; }
+        @media (min-width: 768px) {
+          .fun .content__item.goingMental {
+            background-image: url("../assets/images/fun/gmblog2_bg.jpg");
+            background-position: 30%; } }
+        .fun .content__item.goingMental h2 {
+          color: #414342;
+          font-weight: 400;
+          text-shadow: 2px 2px 6px rgba(150, 150, 150, 0.63); }
+          .fun .content__item.goingMental h2 strong {
+            font-weight: 700; }
+          .fun .content__item.goingMental h2 span {
+            font-size: 24px; }
+            @media (min-width: 1366px) {
+              .fun .content__item.goingMental h2 span {
+                font-size: 40px; } }
+        .fun .content__item.goingMental p {
+          text-shadow: 2px 2px 6px rgba(150, 150, 150, 0.63); }
+      .fun .content__item.instagramLive {
+        background-color: #402359;
+        background-size: cover;
+        background-repeat: no-repeat; }
+        @media (min-width: 768px) {
+          .fun .content__item.instagramLive {
+            background-image: url("../assets/images/fun/iglive_bg.jpg");
+            background-position: right; } }
+        @media (min-width: 1024px) {
+          .fun .content__item.instagramLive {
+            background-position: center; } }
+        @media (min-width: 768px) {
+          .fun .content__item.instagramLive .content__item-inner {
+            padding-top: 50vh; } }
+        @media (min-width: 1366px) {
+          .fun .content__item.instagramLive .content__item-inner {
+            width: 520px;
+            box-sizing: border-box;
+            padding-top: 25vh;
+            position: static;
+            margin-right: 0;
+            margin-left: 0;
+            margin-left: 125px; } }
+        @media (min-width: 1366px) {
+          .fun .content__item.instagramLive .content__item-inner h2 {
+            margin-bottom: 40px; } }
+        .fun .content__item.instagramLive .icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: -6px; }
+          @media (min-width: 768px) {
+            .fun .content__item.instagramLive .icon {
+              width: 60px;
+              height: 60px;
+              margin-bottom: -8px; } }
+          @media (min-width: 1366px) {
+            .fun .content__item.instagramLive .icon {
+              width: 80px;
+              height: 80px;
+              margin-bottom: -10px; } }
+      .fun .content__item.stuff {
+        background-color: black; }
+        .fun .content__item.stuff .button {
+          border: 2px solid white;
+          padding: 20px;
+          width: 100px;
+          text-align: center;
+          font-weight: bold;
+          margin: 0 auto;
+          font-size: 20px; }
+      .fun .content__item.fbLive {
+        color: black;
+        background-color: #e9e9e9;
+        background-size: cover;
+        background-repeat: no-repeat; }
+        @media (min-width: 768px) {
+          .fun .content__item.fbLive {
+            background-image: url("../assets/images/fun/fun_fblive_bg.jpg");
+            background-position: 0%; } }
+        @media (min-width: 1024px) {
+          .fun .content__item.fbLive {
+            background-position: center; } }
+        @media (min-width: 1024px) {
+          .fun .content__item.fbLive .content__item-inner {
+            width: 450px;
+            padding-top: 52vh;
+            margin-left: auto;
+            margin-right: 50px;
+            box-sizing: border-box; } }
+        @media (min-width: 1366px) {
+          .fun .content__item.fbLive .content__item-inner {
+            padding-top: 52vh;
+            width: 600px;
+            position: absolute;
+            right: 3%; } }

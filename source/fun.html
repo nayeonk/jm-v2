@@ -39,25 +39,30 @@
 		</div>
 
 		<div class="content">
-			<div class="content__item">
-				<h2 id="goingMental">Going Mental</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+			<div class="content__item goingMental" id="goingMental">
+				<div class="content__item-inner">
+					<h2>GOING <strong>MENTAL</strong><span>/blog</span></h2>
+					<p>My "Going Mental" blog is an outlet for me to explore my interest in psychology+mental health and connect with others who are curious about the topics. I'm hoping to build a little "Going Mental" community where we can swap articles, ideas, and thoughts on building better minds and living for ourselves. Posts will typically be weekly.</p>
+					<p>Visit: http://goingmental.jennettemccurdy.com/</p>
+				</div>
 			</div>
-			<div class="content__item">
-				<h2 id="fbLive">FB Live</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+			<div class="content__item instagramLive" id="instagramLive">
+				<div class="content__item-inner">
+					<h2>Instagram Live <img src="assets/images/fun/instagram-icon.png" class="icon"/></h2>
+					<p>My Instagram Lives are sporadic and unpredictable, each one done on a whim when I am likely either very excited about something or very bored about life in general. Chances are, my Instagram Lives are a waste of your time and mine, but hey, occasional time waters never hurt anyone. I'm sure you're tempted by how amazing these instagram lives sound, so be sure to turn on your push notifications so you know when I'm broadcasting.</p>
+				</div>
 			</div>
-			<div class="content__item">
-				<h2 id="stuff"></h2>
-				<div style="border: 2px solid white;padding:20px; width:100px;text-align:center;font-weight:bold;margin:0 auto;font-size: 20px;">STUFF</div>
+			<div class="content__item stuff" id="stuff">
+				<div class="content__item-inner">
+					<h2></h2>
+					<div style="border: 2px solid white;padding:20px; width:100px;text-align:center;font-weight:bold;margin:0 auto;font-size: 20px;">STUFF</div>
+				</div>
 			</div>
-			<div class="content__item">
-				<h2 id="instagramLive">Instagram</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
-			</div>
-			<div class="content__item">
-				<h2 id="ezine">eZine</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida lacus ex. Nullam sodales mi neque. Sed porta ullamcorper lacus, quis sollicitudin quam venenatis quis. Fusce eu ipsum at nisi imperdiet congue. Fusce dapibus tincidunt neque, ut laoreet eros blandit sed. Nulla et neque et sapien faucibus hendrerit non id arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed elementum sapien quis lorem mattis, vitae varius dui tincidunt. Pellentesque eu euismod leo. Mauris elementum tortor ut quam suscipit, ut rhoncus odio iaculis. Aenean commodo libero libero, a ultricies nisi tempus sit amet. Nam sit amet rhoncus risus, a semper dolor.</p>
+			<div class="content__item fbLive" id="fbLive">
+				<div class="content__item-inner">
+					<h2>Facebook Live</h2>
+					<p>My facebook lives are bi-weekly broadcasts based on topics sent in by you guys via my twitter and instagram pages. In each episode, I chose three topics and give you my point of view on them. Broadcasts are 15-20 mintes.</p>
+				</div>
 			</div>
 		</div>
 		
@@ -67,20 +72,17 @@
 	<script src="assets/vendor/js/animatescroll.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script>
-		$('#stuffButton').on('click', function() {
-			$('#goingMental').animatescroll({scrollSpeed: 1000, padding: 20});
+		$('#goingMentalButton').on('click', function() {
+			$('#goingMental').animatescroll({scrollSpeed: 600});
 		});
 		$('#fbLiveButton').on('click', function() {
-			$('#fbLive').animatescroll({scrollSpeed: 1000, padding: 20});
+			$('#fbLive').animatescroll({scrollSpeed: 600});
 		});
 		$('#instagramLiveButton').on('click', function() {
-			$('#instagramLive').animatescroll({scrollSpeed: 1000, padding: 20});
+			$('#instagramLive').animatescroll({scrollSpeed: 600});
 		});
-		$('#goingButton').on('click', function() {
-			$('#stuff').animatescroll({scrollSpeed: 1000, padding: 20});
-		});
-		$('#ezineButton').on('click', function() {
-			$('#ezine').animatescroll({scrollSpeed: 1000, padding: 20});
+		$('#stuffButton').on('click', function() {
+			$('#stuff').animatescroll({scrollSpeed: 600});
 		});
 	</script>
 </body>
