@@ -4,7 +4,7 @@ var videoElement = videoWrap.querySelector('video');
 var videoWebm = videoElement.querySelector('#video-player--webm');
 var videoMp4 = videoElement.querySelector('#video-player--mp4');
 var videoOgv = videoElement.querySelector('#video-player--ogv');
-var playControl = document.querySelector('.action--play');
+// var playControl = document.querySelector('.action--play');
 var closeControl = document.querySelector('.action--close');
 
 var playVideo1 = document.querySelector('.action--play1');
@@ -18,8 +18,7 @@ function init() {
 }
 
 function initEvents() {
-	playControl.addEventListener('click', play);
-
+	// playControl.addEventListener('click', play);
 	playVideo1.addEventListener('click', play);
 	playVideo2.addEventListener('click', play);
 	playVideo3.addEventListener('click', play);
@@ -35,13 +34,12 @@ function allowPlay() {
 
 function play() {
 	console.log(this.dataset.video);
+
 	videoElement.currentTime = 0;
 
 	videoWebm.setAttribute('src', videoPath + this.dataset.video + '.webm');
 	videoMp4.setAttribute('src', videoPath + this.dataset.video + '.mp4');
 	videoOgv.setAttribute('src', videoPath + this.dataset.video + '.ogv');
-	// videoMp4.src = videoPath + this.dataset.video + '.mp4';
-	// videoOgv.src = videoPath + this.dataset.video + '.ogv';
 
 	classie.remove(videoWrap, 'video-wrap--hide');
 	classie.add(videoWrap, 'video-wrap--show');

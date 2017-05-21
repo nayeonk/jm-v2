@@ -223,18 +223,27 @@
 		transition: opacity 0.3s;
 	}
 	.action {
-		font-size: 1.15em;
+		font-size: 18px;
 		font-weight: $bold;
 		position: relative;
 		overflow: hidden;
-		margin: 0;
-		padding: 1em 2em;
+		padding: 1em 0;
 		color: #fff;
 		border: 2px solid;
 		border-radius: 40px;
 		background: none;
 		-webkit-flex: none;
 		flex: none;
+		display: block;
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 60px;
+		text-align: center;
+		@media (min-width: $breakpoint-sm) {
+			margin-top: 80px;
+			width: 220px;
+		}
 	}
 	.action:focus {
 		outline: none;
@@ -282,20 +291,24 @@
 		transform: scale3d(1,1,1);
 	}
 	.spread {
-		width: 100%;
-		margin: 12em 0 0em 0;
+		width: 90%;
 		text-align: center;
 		white-space: nowrap;
 		@media (min-width: $breakpoint-sm) {
-			margin: 9em 0 0em 0;
-			text-align: left;
+			width: 600px;
+			// margin: 9em 0 0em 0;
+			// text-align: left;
 			// trying out transform to position things
-			-webkit-transform: translate(140px,0);
-			transform: translate(140px,0);
+			-webkit-transform: translate(-150px,0);
+			transform: translate(-150px,0);
+		}
+		@media (min-width: $breakpoint-md) {
+			-webkit-transform: translate(-200px,0);
+			transform: translate(-200px,0);
 		}
 		&__img {
-			width: 150px;
-			height: 150px;
+			width: 130px;
+			height: 130px;
 			margin: 0 -20px;
 			border: 5px solid #fff;
 			outline: 1px solid transparent;
