@@ -299,14 +299,32 @@ $circleCoordinates5 : -74.25px, 74.25px;
 			}
 			&.stuff {
 				background-color: rgba(0,0,0,1);
+				text-align: center;
 				.button {
 					border: 2px solid white;
-					padding:20px; 
-					width:100px;
-					text-align:center;
-					font-weight:bold;
-					margin:0 auto;
+					padding: 20px 0px; 
+					display: block;
+					width: 200px;
+					text-align: center;
+					font-weight: bold;
+					margin: 0 auto;
 					font-size: 20px;
+					color: #fff;
+				}
+				.content__item-inner {
+					padding-top: 30vh;
+					@media (min-width: $breakpoint-sm) {
+						padding-top: 50vh;
+					}
+					@media (min-width: $breakpoint-lg) {
+						width: 520px;
+						box-sizing: border-box;
+						padding-top: 25vh;
+						position: static;
+						margin-right: 0;
+						margin-left: 0;
+						margin-left: 125px;
+					}
 				}
 			}
 			&.fbLive {
@@ -317,7 +335,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 				background-size: cover;
 				background-repeat: no-repeat;
 				@media (min-width: $breakpoint-sm) {
-					background-image: url('../assets/images/fun/fun_fblive_bg.jpg');
+					background-image: url('../assets/images/fun/fun_fblive_bg2.jpg');
 					background-position: 0%;
 				}
 				@media (min-width: $breakpoint-md) {
