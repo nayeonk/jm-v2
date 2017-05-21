@@ -34,8 +34,9 @@
 		<div class="video-wrap">
 			<div class="video-inner">
 				<video class="video-player" poster="">
-					<source src="assets/videos/jm1.webm" type="video/webm"></source>
-					<source src="assets/videos/jm1.mp4" type="video/mp4"></source>
+					<source id="video-player--webm" src="assets/videos/webshootbts_480p.webm" type="video/webm"></source>
+					<source id="video-player--mp4" src="assets/videos/webshootbts_480p.mp4" type="video/mp4"></source>
+					<source id="video-player--ogv" src="assets/videos/webshootbts_480p.ogv" type="video/ogg"></source>
 					Sorry, your browser does not support this video format.
 				</video>
 				<button class="action action--close">
@@ -44,17 +45,18 @@
 				</button>
 			</div>
 		</div>
+
 		<div class="spread">
-			<img class="spread__img spread__img--rotation-1 action--play1" src="assets/images/photos/1_500.jpg"/>
-			<img class="spread__img spread__img--rotation-2 action--play2" src="assets/images/photos/2_500.jpg"/>
-			<img class="spread__img spread__img--rotation-3 action--play3" src="assets/images/photos/3_500.jpg"/>
+			<img class="spread__img spread__img--rotation-1 action--play1" src="assets/images/photos/3_500.jpg" data-video="bloopers_02"/>
+			<img class="spread__img spread__img--rotation-2 action--play2" src="assets/images/videos/polaroid2.jpg" data-video="welcomevideo_480p_ws_final_02"/>
+			<img class="spread__img spread__img--rotation-3 action--play3" src="assets/images/videos/polaroid1.jpg" data-video="webshootbts_480p"/>
 		</div>
 		<div class="content">
 			<div class="loader">
 				<i class="fa fa-spinner fa-pulse"></i>
 			</div>
 			<button class="action action--hidden action--play">
-				<i class="fa fa-play"></i><span class="action__label">Watch the video</span>
+				<i class="fa fa-play"></i><span class="action__label">Visit YouTube</span>
 			</button>
 		</div>
 	</div>
