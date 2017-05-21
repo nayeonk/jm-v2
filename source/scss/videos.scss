@@ -234,15 +234,17 @@
 		background: none;
 		-webkit-flex: none;
 		flex: none;
-		display: block;
-		width: 200px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 60px;
-		text-align: center;
-		@media (min-width: $breakpoint-sm) {
-			margin-top: 80px;
-			width: 220px;
+		&.btn {
+			display: block;
+			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 60px;
+			text-align: center;
+			@media (min-width: $breakpoint-sm) {
+				margin-top: 80px;
+				width: 220px;
+			}
 		}
 	}
 	.action:focus {
