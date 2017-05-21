@@ -37,72 +37,87 @@
 			// background-attachment: fixed;
 		}
 	}
-	.posts {
-		padding-top: 60px;
-		position: relative;
-		@media (min-width: $breakpoint-sm) {
-			padding-top: 120px;
-		}
-		@media (min-width: $breakpoint-md) {
-			padding-top: 120px;
-		}
-		@media (min-width: $breakpoint-lg) {
-			padding-top: 140px;
-		}
-		&__container {
-			box-sizing: border-box;
-			width: 90%;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 40px;
-			padding: 30px 20px 20px 20px;
-			color: #fbfbfb;
-			background-color: rgba(0,0,0,0.6);
-			// position: relative;
-			// top: 70px;
-			@media (min-width: $breakpoint-sm) {
-				// top: 110px;
-				width: 85%;
-				padding: 30px 30px 20px 30px;
-			}
-			@media (min-width: $breakpoint-md) {
-				width: 640px;
-				padding: 60px 30px 20px 40px;
-				margin-left: 80px;
-				margin-right: 0;
-			}
-			@media (min-width: $breakpoint-lg) {
-				width: 820px;
-				margin-left: 140px;
-			}
-		}
-		&__item {
-			position: relative;
-			padding-left: 65px;
-			margin-bottom: 40px;
-			@media (min-width: $breakpoint-md) {
-				padding-left: 120px;
-				margin-bottom: 80px;
-			}
-			img {
-				width: 50px;
-				position: absolute;
-				top: -10px;
-				left: 0;
-				@media (min-width: $breakpoint-md) {
-					width: 100px;
-					top: -40px;
-				}
-			}
-			h2 {
-				@media (min-width: $breakpoint-md) {
-					font-size: 34px;
-					font-weight: $normal;
-				}
-			}
-		}
-	}
 	footer {
 		position: relative;
+	}
+
+	// Exception for projects page
+	.posts .posts__item img.icon {
+		width: 50px;
+		height: auto;
+		border: none;
+		border-radius: 0;
+		@media (min-width: $breakpoint-md) {
+			width: 100px;
+		}
+	}
+}
+.posts {
+	padding-top: 60px;
+	position: relative;
+	@media (min-width: $breakpoint-sm) {
+		padding-top: 120px;
+	}
+	@media (min-width: $breakpoint-md) {
+		padding-top: 120px;
+	}
+	@media (min-width: $breakpoint-lg) {
+		padding-top: 140px;
+	}
+	&__container {
+		box-sizing: border-box;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+		padding: 30px 20px 20px 20px;
+		color: #fbfbfb;
+		background-color: rgba(0,0,0,0.6);
+		// position: relative;
+		// top: 70px;
+		@media (min-width: $breakpoint-sm) {
+			// top: 110px;
+			width: 85%;
+			padding: 30px 30px 20px 30px;
+		}
+		@media (min-width: $breakpoint-md) {
+			width: 640px;
+			padding: 60px 30px 20px 40px;
+			margin-left: 80px;
+			margin-right: 0;
+		}
+		@media (min-width: $breakpoint-lg) {
+			width: 820px;
+			margin-left: 140px;
+		}
+	}
+	&__item {
+		position: relative;
+		padding-left: 65px;
+		margin-bottom: 40px;
+		@media (min-width: $breakpoint-md) {
+			padding-left: 120px;
+			margin-bottom: 80px;
+		}
+		img.icon {
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: -10px;
+			left: 0;
+			border: 2px solid #a8872d;
+			@media (min-width: $breakpoint-md) {
+				width: 90px;
+			    height: 90px;
+				top: -20px;
+			}
+		}
+		&-title {
+			@media (min-width: $breakpoint-md) {
+				font-size: 34px;
+				font-weight: $normal;
+			}
+		}
 	}
 }

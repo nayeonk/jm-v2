@@ -55,8 +55,8 @@
 		
 		for(var i = 0; i < recentProjects.length; i++) {
 			item += '<div class="posts__item">';
-			item += '<img src="' + imagePath + recentProjects[i].icon +'"/>';
-			item += '<h2>' + recentProjects[i].name + '</h2>';
+			item += '<img class="icon" src="' + imagePath + recentProjects[i].icon +'"/>';
+			item += '<h2 class="posts__item-title">' + recentProjects[i].name + '</h2>';
 			item += '<p>' + recentProjects[i].description + '</p>';
 			item += '<strong>' + recentProjects[i].date + '</strong>';
 			item += '</div>';
