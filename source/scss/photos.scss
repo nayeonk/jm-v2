@@ -176,11 +176,16 @@
 		bottom: 30px;
 		left: 45%;
 		@media (min-width: $breakpoint-sm) {
-			bottom: 40px;
-			right: 40px;
-			left: auto;
+			// bottom: 40px;
+			// right: 40px;
+			// left: auto;
 		}
 		@media (min-width: $breakpoint-md) {
+			bottom: 35px;
+			right: 110px;
+			left: auto;
+		}
+		@media (min-width: $breakpoint-lg) {
 			bottom: 80px;
 			right: 120px;
 			left: auto;

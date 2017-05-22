@@ -110,12 +110,12 @@
     position: absolute;
     bottom: 30px;
     left: 45%; }
-    @media (min-width: 768px) {
-      .photos .trigger {
-        bottom: 40px;
-        right: 40px;
-        left: auto; } }
     @media (min-width: 1024px) {
+      .photos .trigger {
+        bottom: 35px;
+        right: 110px;
+        left: auto; } }
+    @media (min-width: 1366px) {
       .photos .trigger {
         bottom: 80px;
         right: 120px;
