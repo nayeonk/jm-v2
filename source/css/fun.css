@@ -149,7 +149,7 @@
         @media (min-width: 768px) {
           .fun .content__item h2 {
             font-size: 44px; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1200px) {
           .fun .content__item h2 {
             font-size: 54px;
             margin-bottom: 10px; } }
@@ -171,7 +171,7 @@
         @media (min-width: 1024px) {
           .fun .content__item-inner {
             padding-top: 42vh; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1200px) {
           .fun .content__item-inner {
             width: 600px;
             box-sizing: border-box;
@@ -194,7 +194,7 @@
             font-weight: 700; }
           .fun .content__item.goingMental h2 span {
             font-size: 24px; }
-            @media (min-width: 1366px) {
+            @media (min-width: 1200px) {
               .fun .content__item.goingMental h2 span {
                 font-size: 40px; } }
         .fun .content__item.goingMental p {
@@ -213,7 +213,7 @@
         @media (min-width: 768px) {
           .fun .content__item.instagramLive .content__item-inner {
             padding-top: 50vh; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1200px) {
           .fun .content__item.instagramLive .content__item-inner {
             width: 520px;
             box-sizing: border-box;
@@ -222,7 +222,7 @@
             margin-right: 0;
             margin-left: 0;
             margin-left: 125px; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1200px) {
           .fun .content__item.instagramLive .content__item-inner h2 {
             margin-bottom: 40px; } }
         .fun .content__item.instagramLive .icon {
@@ -257,7 +257,7 @@
           @media (min-width: 768px) {
             .fun .content__item.stuff .content__item-inner {
               padding-top: 50vh; } }
-          @media (min-width: 1366px) {
+          @media (min-width: 1200px) {
             .fun .content__item.stuff .content__item-inner {
               width: 520px;
               box-sizing: border-box;
@@ -285,9 +285,11 @@
             margin-left: auto;
             margin-right: 50px;
             box-sizing: border-box; } }
-        @media (min-width: 1366px) {
+        @media (min-width: 1200px) {
           .fun .content__item.fbLive .content__item-inner {
             padding-top: 52vh;
             width: 600px;
             position: absolute;
             right: 3%; } }
+        .fun .content__item.fbLive p {
+          text-shadow: 1px 0px 7px white; }

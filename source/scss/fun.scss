@@ -193,7 +193,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 				@media (min-width: $breakpoint-sm) {
 					font-size: 44px;
 				}
-				@media (min-width: $breakpoint-lg) {
+				@media (min-width: 1200px) {
 					font-size: 54px;
 					margin-bottom: 10px;
 				}
@@ -217,7 +217,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 				@media (min-width: $breakpoint-md) {
 					padding-top: 42vh;
 				}
-				@media (min-width: $breakpoint-lg) {
+				@media (min-width: 1200px) {
 					width: 600px;
 					box-sizing: border-box;
 					padding-top: 48vh;
@@ -242,7 +242,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 					}
 					span {
 						font-size: 24px;
-						@media (min-width: $breakpoint-lg) {
+						@media (min-width: 1200px) {
 							font-size: 40px;
 						}
 					}
@@ -266,7 +266,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 					@media (min-width: $breakpoint-sm) {
 						padding-top: 50vh;
 					}
-					@media (min-width: $breakpoint-lg) {
+					@media (min-width: 1200px) {
 						width: 520px;
 						box-sizing: border-box;
 						padding-top: 25vh;
@@ -276,7 +276,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 						margin-left: 125px;
 					}
 					h2 {
-						@media (min-width: $breakpoint-lg) {
+						@media (min-width: 1200px) {
 							margin-bottom: 40px;
 						}
 					}
@@ -316,7 +316,7 @@ $circleCoordinates5 : -74.25px, 74.25px;
 					@media (min-width: $breakpoint-sm) {
 						padding-top: 50vh;
 					}
-					@media (min-width: $breakpoint-lg) {
+					@media (min-width: 1200px) {
 						width: 520px;
 						box-sizing: border-box;
 						padding-top: 25vh;
@@ -349,12 +349,15 @@ $circleCoordinates5 : -74.25px, 74.25px;
 						margin-right: 50px;
 						box-sizing: border-box;
 					}
-					@media (min-width: $breakpoint-lg) {
+					@media (min-width: 1200px) {
 						padding-top: 52vh;
 						width: 600px;
 						position: absolute;
 						right: 3%;
 					}
+				}
+				p {
+					text-shadow: 1px 0px 7px rgba(255, 255, 255, 1);
 				}
 			}
 		}
