@@ -98,6 +98,21 @@ a:hover {
   position: absolute;
   bottom: 0; }
 
+/** 404 page **/
+.notfound {
+  padding-top: 60px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .notfound {
+      padding-top: 100px; } }
+  .notfound h2 {
+    font-size: 30px;
+    margin-top: 5px; }
+  .notfound img {
+    max-width: 100%; }
+  .notfound h1 {
+    font-size: 60px; }
+
 /* Menu styles - note: might move to separate file */
 .menu {
   position: relative;
@@ -363,7 +378,6 @@ a:hover {
 
 /** Modal when outdated browser is detected **/
 .browser-warning {
-  display: none;
   position: absolute;
   z-index: 99999999999;
   width: 760px;

@@ -119,6 +119,25 @@ a:hover {
 	bottom: 0;
 }
 
+/** 404 page **/
+.notfound {
+	padding-top: 60px;
+	text-align: center;
+	@media (min-width: $breakpoint-sm) {
+		padding-top: 100px;
+	}
+	h2 {
+		font-size: 30px;
+		margin-top: 5px;
+	}
+	img {
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 60px;
+	}
+}
+
 /* Menu styles - note: might move to separate file */
 .menu {
 	position: relative;
@@ -416,7 +435,7 @@ a:hover {
 
 /** Modal when outdated browser is detected **/
 .browser-warning {
-	display: none;
+	// display: none;
 	position: absolute;
 	z-index: 99999999999;
 	width: 760px;
