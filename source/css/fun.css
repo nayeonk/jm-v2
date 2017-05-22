@@ -273,7 +273,7 @@
         background-repeat: no-repeat; }
         @media (min-width: 768px) {
           .fun .content__item.fbLive {
-            background-image: url("../assets/images/fun/fblive_07_bg.jpg");
+            background-image: url("../assets/images/fun/fblive-bg_final.jpg");
             background-position: 0%; } }
         @media (min-width: 1024px) {
           .fun .content__item.fbLive {
