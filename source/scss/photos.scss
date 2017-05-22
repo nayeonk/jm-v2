@@ -294,6 +294,9 @@
 		@media (min-width: $breakpoint-md) {
 			width: 900px;
 		}
+		a {
+			text-decoration: underline;
+		}
 	}
 	.nav {
 		&__prev {

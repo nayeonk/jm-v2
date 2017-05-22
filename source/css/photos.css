@@ -205,6 +205,8 @@
     @media (min-width: 1024px) {
       .photos .bar {
         width: 900px; } }
+    .photos .bar a {
+      text-decoration: underline; }
   .photos .nav__prev {
     left: 0px; }
     .photos .nav__prev span {
