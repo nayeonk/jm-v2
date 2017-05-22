@@ -302,10 +302,10 @@ a:hover {
       padding-top: 80px; } }
   @media (min-width: 1024px) {
     .posts {
-      padding-top: 120px; } }
+      padding-top: 90px; } }
   @media (min-width: 1366px) {
     .posts {
-      padding-top: 140px; } }
+      padding-top: 100px; } }
   .posts__title {
     text-align: center;
     margin-top: 0;
@@ -314,29 +314,43 @@ a:hover {
     @media (min-width: 768px) {
       .posts__title {
         font-size: 40px; } }
+    @media (min-width: 1024px) {
+      .posts__title {
+        font-size: 40px;
+        text-align: left; } }
+    @media (min-width: 1366px) {
+      .posts__title {
+        font-size: 48px; } }
   .posts__container {
     box-sizing: border-box;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
-    padding: 40px 20px 20px 20px;
-    color: #fbfbfb;
-    background-color: rgba(0, 0, 0, 0.6); }
+    margin-bottom: 40px; }
     @media (min-width: 768px) {
       .posts__container {
-        width: 85%;
-        padding: 55px 40px 30px 35px; } }
+        width: 85%; } }
     @media (min-width: 1024px) {
       .posts__container {
         width: 640px;
-        padding: 60px 30px 20px 40px;
         margin-left: 80px;
         margin-right: 0; } }
     @media (min-width: 1366px) {
       .posts__container {
         width: 820px;
-        margin-left: 140px;
+        margin-left: 140px; } }
+  .posts__content {
+    color: #fbfbfb;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 35px 20px 20px 20px; }
+    @media (min-width: 768px) {
+      .posts__content {
+        padding: 55px 40px 30px 35px; } }
+    @media (min-width: 1024px) {
+      .posts__content {
+        padding: 60px 30px 20px 40px; } }
+    @media (min-width: 1366px) {
+      .posts__content {
         padding: 60px 50px 20px 40px; } }
   .posts__item {
     position: relative;
@@ -367,7 +381,7 @@ a:hover {
           height: 90px;
           top: -20px; } }
     .posts__item-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 400; }
       @media (min-width: 768px) {
         .posts__item-title {

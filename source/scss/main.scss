@@ -349,10 +349,10 @@ a:hover {
 		padding-top: 80px;
 	}
 	@media (min-width: $breakpoint-md) {
-		padding-top: 120px;
+		padding-top: 90px;
 	}
 	@media (min-width: $breakpoint-lg) {
-		padding-top: 140px;
+		padding-top: 100px;
 	}
 	&__title {
 		text-align: center;
@@ -362,6 +362,13 @@ a:hover {
 		@media (min-width: $breakpoint-sm) {
 			font-size: 40px;
 		}
+		@media (min-width: $breakpoint-md) {
+			font-size: 40px;
+			text-align: left;
+		}
+		@media (min-width: $breakpoint-lg) {
+			font-size: 48px;
+		}
 	}
 	&__container {
 		box-sizing: border-box;
@@ -369,25 +376,37 @@ a:hover {
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 40px;
-		padding: 40px 20px 20px 20px;
-		color: #fbfbfb;
-		background-color: rgba(0,0,0,0.6);
+		// padding: 0px 20px 20px 20px;
 		// position: relative;
 		// top: 70px;
 		@media (min-width: $breakpoint-sm) {
 			// top: 110px;
 			width: 85%;
-			padding: 55px 40px 30px 35px;
+			// padding: 55px 40px 30px 35px;
 		}
 		@media (min-width: $breakpoint-md) {
 			width: 640px;
-			padding: 60px 30px 20px 40px;
+			// padding: 60px 30px 20px 40px;
 			margin-left: 80px;
 			margin-right: 0;
 		}
 		@media (min-width: $breakpoint-lg) {
 			width: 820px;
 			margin-left: 140px;
+			// padding: 60px 50px 20px 40px;
+		}
+	}
+	&__content {
+		color: #fbfbfb;
+		background-color: rgba(0,0,0,0.6);
+		padding: 35px 20px 20px 20px;
+		@media (min-width: $breakpoint-sm) {
+			padding: 55px 40px 30px 35px;
+		}
+		@media (min-width: $breakpoint-md) {
+			padding: 60px 30px 20px 40px;
+		}
+		@media (min-width: $breakpoint-lg) {
 			padding: 60px 50px 20px 40px;
 		}
 	}
@@ -421,7 +440,7 @@ a:hover {
 			}
 		}
 		&-title {
-			font-size: 18px;
+			font-size: 19px;
 			font-weight: $normal;
 			@media (min-width: $breakpoint-sm) {
 				font-size: 24px;
