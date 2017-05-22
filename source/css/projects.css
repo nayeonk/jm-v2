@@ -89,11 +89,3 @@
             font-size: 34px; } }
   .projects .footer {
     position: relative; }
-  .projects .posts .posts__item img.icon {
-    width: 50px;
-    height: auto;
-    border: none;
-    border-radius: 0; }
-    @media (min-width: 1024px) {
-      .projects .posts .posts__item img.icon {
-        width: 100px; } }

@@ -117,15 +117,4 @@
 	.footer {
 		position: relative;
 	}
-
-	// Exception for projects page
-	.posts .posts__item img.icon {
-		width: 50px;
-		height: auto;
-		border: none;
-		border-radius: 0;
-		@media (min-width: $breakpoint-md) {
-			width: 100px;
-		}
-	}
 }
