@@ -326,7 +326,7 @@ footer.fixed {
 	padding-top: 60px;
 	position: relative;
 	@media (min-width: $breakpoint-sm) {
-		padding-top: 120px;
+		padding-top: 80px;
 	}
 	@media (min-width: $breakpoint-md) {
 		padding-top: 120px;
@@ -334,13 +334,22 @@ footer.fixed {
 	@media (min-width: $breakpoint-lg) {
 		padding-top: 140px;
 	}
+	&__title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 32px;
+		@media (min-width: $breakpoint-sm) {
+			font-size: 40px;
+		}
+	}
 	&__container {
 		box-sizing: border-box;
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 40px;
-		padding: 30px 20px 20px 20px;
+		padding: 40px 20px 20px 20px;
 		color: #fbfbfb;
 		background-color: rgba(0,0,0,0.6);
 		// position: relative;
@@ -348,7 +357,7 @@ footer.fixed {
 		@media (min-width: $breakpoint-sm) {
 			// top: 110px;
 			width: 85%;
-			padding: 30px 30px 20px 30px;
+			padding: 55px 40px 30px 35px;
 		}
 		@media (min-width: $breakpoint-md) {
 			width: 640px;
@@ -359,12 +368,16 @@ footer.fixed {
 		@media (min-width: $breakpoint-lg) {
 			width: 820px;
 			margin-left: 140px;
+			padding: 60px 50px 20px 40px;
 		}
 	}
 	&__item {
 		position: relative;
 		padding-left: 65px;
 		margin-bottom: 40px;
+		@media (min-width: $breakpoint-sm) {
+			padding-left: 90px;
+		}
 		@media (min-width: $breakpoint-md) {
 			padding-left: 120px;
 			margin-bottom: 80px;
@@ -377,6 +390,10 @@ footer.fixed {
 			top: -10px;
 			left: 0;
 			border: 2px solid #a8872d;
+			@media (min-width: $breakpoint-sm) {
+				width: 70px;
+				height: 70px;
+			}
 			@media (min-width: $breakpoint-md) {
 				width: 90px;
 			    height: 90px;
@@ -384,9 +401,13 @@ footer.fixed {
 			}
 		}
 		&-title {
+			font-size: 18px;
+			font-weight: $normal;
+			@media (min-width: $breakpoint-sm) {
+				font-size: 24px;
+			}
 			@media (min-width: $breakpoint-md) {
 				font-size: 34px;
-				font-weight: $normal;
 			}
 		}
 	}
