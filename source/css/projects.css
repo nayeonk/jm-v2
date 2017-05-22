@@ -19,7 +19,75 @@
     @media (min-width: 1024px) {
       .projects__bg {
         background-position: center 20%; } }
-  .projects footer {
+  .projects__recent {
+    padding-top: 60px;
+    position: relative; }
+    @media (min-width: 768px) {
+      .projects__recent {
+        padding-top: 80px; } }
+    @media (min-width: 1024px) {
+      .projects__recent {
+        padding-top: 120px; } }
+    @media (min-width: 1366px) {
+      .projects__recent {
+        padding-top: 140px; } }
+    .projects__recent-container {
+      box-sizing: border-box;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      padding: 40px 20px 20px 20px;
+      color: #fbfbfb;
+      background-color: rgba(0, 0, 0, 0.6); }
+      @media (min-width: 768px) {
+        .projects__recent-container {
+          width: 85%;
+          padding: 55px 40px 30px 35px; } }
+      @media (min-width: 1024px) {
+        .projects__recent-container {
+          width: 640px;
+          padding: 60px 30px 20px 40px;
+          margin-left: 80px;
+          margin-right: 0; } }
+      @media (min-width: 1366px) {
+        .projects__recent-container {
+          width: 820px;
+          margin-left: 140px;
+          padding: 60px 50px 20px 40px; } }
+    .projects__recent-item {
+      position: relative;
+      padding-left: 65px;
+      margin-bottom: 40px; }
+      @media (min-width: 768px) {
+        .projects__recent-item {
+          padding-left: 90px; } }
+      @media (min-width: 1024px) {
+        .projects__recent-item {
+          padding-left: 120px;
+          margin-bottom: 80px; } }
+      .projects__recent-item img {
+        width: 50px;
+        position: absolute;
+        top: -10px;
+        left: 0; }
+        @media (min-width: 768px) {
+          .projects__recent-item img {
+            width: 70px; } }
+        @media (min-width: 1024px) {
+          .projects__recent-item img {
+            width: 100px;
+            top: -20px; } }
+      .projects__recent-item h2 {
+        font-size: 18px;
+        font-weight: 400; }
+        @media (min-width: 768px) {
+          .projects__recent-item h2 {
+            font-size: 24px; } }
+        @media (min-width: 1024px) {
+          .projects__recent-item h2 {
+            font-size: 34px; } }
+  .projects .footer {
     position: relative; }
   .projects .posts .posts__item img.icon {
     width: 50px;

@@ -31,10 +31,10 @@
 			</div>
 		</div>
 		<div class="projects__bg"></div>
-		<div class="posts">
-			<div class="posts__container" id="recent">
+		<div class="projects__recent">
+			<div class="projects__recent-container" id="recent">
 				<!-- Template for each post
-				<div class="posts__item">
+				<div class="projects__recent-item">
 					<img src="assets/images/projects/icon_slate_film.png"/>
 					<h2>Little Bitches</h2>
 					<p>A group of friends vow to open their college acceptance letters at the same time during the big end-of-year party.</p>
@@ -54,9 +54,9 @@
 		var imagePath = 'assets/images/projects/';
 		
 		for(var i = 0; i < recentProjects.length; i++) {
-			item += '<div class="posts__item">';
-			item += '<img class="icon" src="' + imagePath + recentProjects[i].icon +'"/>';
-			item += '<h2 class="posts__item-title">' + recentProjects[i].name + '</h2>';
+			item += '<div class="projects__recent-item">';
+			item += '<img src="' + imagePath + recentProjects[i].icon +'"/>';
+			item += '<h2>' + recentProjects[i].name + '</h2>';
 			item += '<p>' + recentProjects[i].description + '</p>';
 			item += '<strong>' + recentProjects[i].date + '</strong>';
 			item += '</div>';
