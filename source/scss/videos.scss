@@ -317,6 +317,7 @@
 			outline: 1px solid transparent;
 			box-shadow: 0 0 10px rgba(0,0,0,0.3);
 			background: #aaa;
+			position: relative;
 
 			@media (min-width: $breakpoint-sm) {
 				width: 200px;
@@ -328,14 +329,17 @@
 				&-1 {
 					-webkit-transform: rotate3d(0,0,1,-8deg);
 					transform: rotate3d(0,0,1,-8deg);
+					z-index: 3;
 				}
 				&-2 {
 					-webkit-transform: rotate3d(0,0,1,-1deg);
 					transform: rotate3d(0,0,1,-1deg);
+					z-index: 2;
 				}
 				&-3 {
 					-webkit-transform: rotate3d(0,0,1,9deg);
 					transform: rotate3d(0,0,1,9deg);
+					z-index: 1;
 				}
 			}
 		}
