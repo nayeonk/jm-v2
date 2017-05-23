@@ -87,5 +87,7 @@
         @media (min-width: 1024px) {
           .projects__recent-item h2 {
             font-size: 34px; } }
+      .projects__recent-item a {
+        color: #fff; }
   .projects .footer {
     position: relative; }

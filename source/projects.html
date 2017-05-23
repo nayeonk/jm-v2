@@ -56,7 +56,12 @@
 		for(var i = 0; i < recentProjects.length; i++) {
 			item += '<div class="projects__recent-item">';
 			item += '<img src="' + imagePath + recentProjects[i].icon +'"/>';
-			item += '<h2>' + recentProjects[i].name + '</h2>';
+			if(recentProjects[i].link == false) {
+				item += '<h2>' + recentProjects[i].name + '</h2>';
+			}
+			else {
+				item += '<a target="_blank" href="' + recentProjects[i].link + '"/><h2>' + recentProjects[i].name + '</h2></a>';
+			}
 			item += '<p>' + recentProjects[i].description + '</p>';
 			item += '<strong>' + recentProjects[i].date + '</strong>';
 			item += '</div>';
