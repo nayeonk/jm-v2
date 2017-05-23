@@ -100,11 +100,20 @@ a:hover {
 
 /** 404 page **/
 .notfound {
-  padding-top: 60px;
   text-align: center; }
   @media (min-width: 768px) {
     .notfound {
-      padding-top: 100px; } }
+      padding-top: 60px; } }
+  @media (min-width: 1024px) {
+    .notfound {
+      padding-top: 80px; } }
+  .notfound__container {
+    width: 100%; }
+  .notfound__video {
+    width: 100%; }
+    @media (min-width: 768px) {
+      .notfound__video {
+        width: 480px; } }
   .notfound h2 {
     font-size: 30px;
     margin-top: 5px; }
